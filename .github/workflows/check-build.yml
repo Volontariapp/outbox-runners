@@ -1,4 +1,4 @@
-name: Check Build
+name: Check Build & Lint
 
 on:
   push:
@@ -7,14 +7,19 @@ on:
     branches: [ main, master ]
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         outbox: [outbox-user, outbox-social, outbox-post, outbox-event]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Environment
+        uses: ./ci-tools/.github/actions/setup-node-yarn
         with:
           node-version: '24'
           cache: 'yarn'
@@ -23,6 +28,10 @@ jobs:
       - name: Install dependencies
         working-directory: ${{ matrix.outbox }}
         run: yarn install
+
+      - name: Lint
+        working-directory: ${{ matrix.outbox }}
+        run: yarn lint
 
       - name: Build
         working-directory: ${{ matrix.outbox }}

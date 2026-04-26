@@ -24,10 +24,10 @@ function resolveConfigDirectory(): string {
   throw new Error(`Config directory not found: ${rootConfigDir}`);
 }
 
-async function bootstrap() {
+function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  
+
   const logger = new Logger({
     context: 'OUTBOX-SOCIAL',
     format: config.logger.format,
@@ -44,7 +44,7 @@ async function bootstrap() {
     clearInterval(interval);
     process.exit(0);
   });
-  
+
   process.on('SIGINT', () => {
     logger.info('SIGINT received, shutting down...');
     clearInterval(interval);
@@ -52,7 +52,9 @@ async function bootstrap() {
   });
 }
 
-bootstrap().catch(err => {
+try {
+  bootstrap();
+} catch (err: unknown) {
   console.error(err);
   process.exit(1);
-});
+}

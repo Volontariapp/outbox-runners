@@ -24,7 +24,7 @@ function resolveConfigDirectory(): string {
   throw new Error(`Config directory not found: ${rootConfigDir}`);
 }
 
-async function bootstrap() {
+function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
   
@@ -52,7 +52,9 @@ async function bootstrap() {
   });
 }
 
-bootstrap().catch(err => {
+try {
+  bootstrap();
+} catch (err: unknown) {
   console.error(err);
   process.exit(1);
-});
+}
