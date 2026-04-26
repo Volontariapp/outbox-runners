@@ -2,8 +2,17 @@ import 'reflect-metadata';
 import { existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { loadConfig } from '@volontariapp/config';
+import { IsDefined, ValidateNested } from 'class-validator';
+import { Type } from 'class-transformer';
+import { loadConfig, BaseConfig, PostgresConfig } from '@volontariapp/config';
 import { Logger } from '@volontariapp/logger';
+
+class CustomConfig extends BaseConfig {
+  @IsDefined()
+  @ValidateNested()
+  @Type(() => PostgresConfig)
+  db!: PostgresConfig;
+}
 
 function resolveConfigDirectory(): string {
   const currentFileDir = dirname(fileURLToPath(import.meta.url));
@@ -17,11 +26,11 @@ function resolveConfigDirectory(): string {
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
-  const config = loadConfig(configDir, class BaseConfig {});
+  const config = loadConfig(configDir, CustomConfig);
   
   const logger = new Logger({
     context: 'OUTBOX-EVENT',
-    format: (config as any).logger?.format || 'text',
+    format: config.logger.format,
   });
 
   logger.info('Outbox runner for event starting (Pure Node.js)...');

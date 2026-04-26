@@ -1096,6 +1096,8 @@ __metadata:
     "@types/node": "npm:^22.10.7"
     "@volontariapp/config": "npm:2.0.0"
     "@volontariapp/logger": "npm:0.2.3"
+    class-transformer: "npm:^0.5.1"
+    class-validator: "npm:^0.15.1"
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.1"
     tsx: "npm:^4.21.0"
