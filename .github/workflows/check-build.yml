@@ -1,0 +1,29 @@
+name: Check Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        outbox: [outbox-user, outbox-social, outbox-post, outbox-event]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
+      
+      - name: Install dependencies
+        working-directory: ${{ matrix.outbox }}
+        run: yarn install
+
+      - name: Build
+        working-directory: ${{ matrix.outbox }}
+        run: yarn build

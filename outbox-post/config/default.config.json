@@ -1,0 +1,16 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "password",
+    "database": "ms_post_db",
+    "maxPoolSize": 10,
+    "ssl": false
+  },
+  "logger": {
+    "level": "info",
+    "format": "text"
+  },
+  "port": 4001
+}
