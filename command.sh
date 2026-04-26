@@ -13,7 +13,10 @@ RED='\033[0;31m'
 DIM='\033[2m'
 NC='\033[0m'
 
-OUTBOXES=("outbox-user" "outbox-social" "outbox-post" "outbox-event")
+# Dynamic detection of outbox directories
+get_outboxes() {
+  find . -maxdepth 1 -type d -name "outbox-*" | sed 's|./||' | sort
+}
 
 show_menu() {
   clear
@@ -31,8 +34,9 @@ show_menu() {
   echo -e "  ${BOLD}5)${NC}  🧹  Clean All          ${DIM}— Remove node_modules & dist${NC}"
   
   echo -e "\n  ${BOLD}${CYAN}Development${NC}"
-  echo -e "  ${BOLD}6)${NC}  🚀  Run All (Local)    ${DIM}— Launch all 4 runners${NC}"
+  echo -e "  ${BOLD}6)${NC}  🚀  Run All (Local)    ${DIM}— Launch all detected runners${NC}"
   echo -e "  ${BOLD}7)${NC}  🔄  Update ci-tools    ${DIM}— Update submodule to latest main${NC}"
+  echo -e "  ${BOLD}8)${NC}  ➕  Create Outbox      ${DIM}— Scaffold a new outbox project${NC}"
   
   echo -e "\n  ${BOLD}0)${NC}  ❌  Exit"
   echo ""
@@ -41,16 +45,14 @@ show_menu() {
 run_on_all() {
   local cmd="$1"
   local label="$2"
+  local OUTBOXES
+  OUTBOXES=$(get_outboxes)
   
   echo -e "\n${BLUE}━━━ ${BOLD}${label}${NC}${BLUE} ━━━${NC}\n"
   
-  for outbox in "${OUTBOXES[@]}"; do
-    if [ -d "$outbox" ]; then
-      echo -e "${CYAN}▸ Processing ${BOLD}${outbox}${NC}..."
-      (cd "$outbox" && eval "$cmd")
-    else
-      echo -e "${RED}✖ Directory ${outbox} not found.${NC}"
-    fi
+  for outbox in $OUTBOXES; do
+    echo -e "${CYAN}▸ Processing ${BOLD}${outbox}${NC}..."
+    (cd "$outbox" && eval "$cmd")
   done
   
   echo -e "\n${GREEN}━━━ Done: ${label} ━━━${NC}\n"
@@ -74,18 +76,29 @@ while true; do
       ;;
     6) 
       echo -e "\n${BLUE}━━━ Running: ${BOLD}All Runners${NC}${BLUE} ━━━${NC}\n"
-      # If root package.json exists (which I added for workspace but user said separate)
-      # I'll just use concurrently directly
-      npx concurrently -k -p '[{name}]' -n user,social,post,event -c green,red,cyan,yellow \
-        "cd outbox-user && yarn start:local" \
-        "cd outbox-social && yarn start:local" \
-        "cd outbox-post && yarn start:local" \
-        "cd outbox-event && yarn start:local"
+      OUTBOXES=$(get_outboxes)
+      CMD_PARTS=()
+      NAMES=()
+      for outbox in $OUTBOXES; do
+        NAMES+=("${outbox#outbox-}")
+        CMD_PARTS+=("cd $outbox && yarn start:local")
+      done
+      
+      # Build concurrently command string
+      CONC_CMD="npx concurrently -k -p '[{name}]' -n $(IFS=,; echo "${NAMES[*]}") \"${CMD_PARTS[0]}\""
+      for ((i=1; i<${#CMD_PARTS[@]}; i++)); do
+        CONC_CMD+=" \"${CMD_PARTS[$i]}\""
+      done
+      
+      eval "$CONC_CMD"
       ;;
     7)
       echo -e "\n${BLUE}━━━ Updating ci-tools ━━━${NC}\n"
       git submodule update --remote ci-tools
       echo -e "${GREEN}Done.${NC}"
+      ;;
+    8)
+      bash scripts/create-outbox.sh
       ;;
     0)
       echo -e "\n${DIM}Bye!${NC}\n"
