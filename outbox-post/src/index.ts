@@ -27,7 +27,7 @@ function resolveConfigDirectory(): string {
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  
+
   const logger = new Logger({
     context: 'OUTBOX-POST',
     format: config.logger.format,
@@ -44,7 +44,7 @@ async function bootstrap() {
     clearInterval(interval);
     process.exit(0);
   });
-  
+
   process.on('SIGINT', () => {
     logger.info('SIGINT received, shutting down...');
     clearInterval(interval);
