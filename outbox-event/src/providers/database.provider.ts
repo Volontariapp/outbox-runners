@@ -1,15 +1,26 @@
 import { PostgresProvider } from '@volontariapp/bridge';
-import { PostgresConfig } from '@volontariapp/config';
-import { Logger } from '@volontariapp/logger';
+import type { PostgresConfig } from '@volontariapp/config';
+import type { Logger } from '@volontariapp/logger';
+import { PostgresBridgeHealthProvider } from '@volontariapp/health-check';
 
-export async function initDatabase(config: PostgresConfig, logger: Logger): Promise<PostgresProvider> {
+export async function initDatabase(
+  config: PostgresConfig,
+  logger: Logger,
+): Promise<PostgresProvider> {
   const dbProvider = new PostgresProvider(config);
-  
+
   try {
     await dbProvider.connect();
-    // Explicit ping to ensure the connection is actually usable
-    await dbProvider.getDriver().query('SELECT 1');
-    logger.info('Database connection verified and ready');
+    
+    // Use the standard health-check provider to verify connection
+    const healthProvider = new PostgresBridgeHealthProvider(dbProvider);
+    const health = await healthProvider.health();
+    
+    if (health.status !== 'up') {
+      throw new Error(`Database health check failed: ${health.message}`);
+    }
+
+    logger.info('Database connection verified and ready via health-check');
     return dbProvider;
   } catch (err: unknown) {
     logger.error('Failed to initialize database connection', { err });

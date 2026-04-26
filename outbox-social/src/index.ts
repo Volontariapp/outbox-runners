@@ -16,11 +16,9 @@ async function bootstrap() {
 
   logger.info('Outbox runner for social starting (Lean Mode)...');
 
-  // Initialize DB Connection with Startup Check
   const dbProvider = await initDatabase(config.db, logger);
 
   const interval = setInterval(() => {
-    // Check if DB is still connected (Liveness)
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
       process.exit(1);
@@ -44,8 +42,6 @@ async function bootstrap() {
 }
 
 void bootstrap().catch((err: unknown) => {
-  // In Lean Mode, we want the process to exit on any bootstrap failure
-  // so the orchestrator can restart it.
   console.error('Fatal bootstrap error:', err);
   process.exit(1);
 });
