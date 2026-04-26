@@ -8,33 +8,25 @@ import { initDatabase } from './providers/database.provider.js';
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  
   const logger = new Logger({
     context: 'OUTBOX-POST',
     format: config.logger.format,
   });
-
   logger.info('Outbox runner for post starting (Lean Mode)...');
-
-  // Initialize DB Connection with Startup Check
   const dbProvider = await initDatabase(config.db, logger);
-
   const interval = setInterval(() => {
-    // Check if DB is still connected (Liveness)
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
       process.exit(1);
     }
     logger.info('Checking for new outbox messages...');
   }, 10000);
-
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
     clearInterval(interval);
     await dbProvider.disconnect();
     process.exit(0);
   };
-
   process.on('SIGTERM', () => {
     void shutdown('SIGTERM');
   });
@@ -44,8 +36,6 @@ async function bootstrap() {
 }
 
 void bootstrap().catch((err: unknown) => {
-  // In Lean Mode, we want the process to exit on any bootstrap failure
-  // so the orchestrator can restart it.
   console.error('Fatal bootstrap error:', err);
   process.exit(1);
 });

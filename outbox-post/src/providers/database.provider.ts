@@ -11,16 +11,11 @@ export async function initDatabase(
 
   try {
     await dbProvider.connect();
-
     const healthProvider = new PostgresBridgeHealthProvider(dbProvider);
     const health = await healthProvider.health();
-
     if (health.status !== 'up') {
-      throw new Error(
-        `Database health check failed: ${health.error || 'Unknown error'}`,
-      );
+      throw new Error(`Database health check failed: ${health.message}`);
     }
-
     logger.info('Database connection verified and ready via health-check');
     return dbProvider;
   } catch (err: unknown) {

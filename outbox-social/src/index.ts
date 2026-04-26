@@ -8,16 +8,12 @@ import { initDatabase } from './providers/database.provider.js';
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-
   const logger = new Logger({
     context: 'OUTBOX-SOCIAL',
     format: config.logger.format,
   });
-
   logger.info('Outbox runner for social starting (Lean Mode)...');
-
   const dbProvider = await initDatabase(config.db, logger);
-
   const interval = setInterval(() => {
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
@@ -25,14 +21,12 @@ async function bootstrap() {
     }
     logger.info('Checking for new outbox messages...');
   }, 10000);
-
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
     clearInterval(interval);
     await dbProvider.disconnect();
     process.exit(0);
   };
-
   process.on('SIGTERM', () => {
     void shutdown('SIGTERM');
   });
