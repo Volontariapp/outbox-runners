@@ -33,10 +33,11 @@ show_menu() {
   echo -e "  ${BOLD}4)${NC}  🧪  Test All           ${DIM}— jest in all outboxes${NC}"
   echo -e "  ${BOLD}5)${NC}  🧹  Clean All          ${DIM}— Remove node_modules & dist${NC}"
   
-  echo -e "\n  ${BOLD}${CYAN}Development${NC}"
+  echo -e "  ${BOLD}${CYAN}Development${NC}"
   echo -e "  ${BOLD}6)${NC}  🚀  Run All (Local)    ${DIM}— Launch all detected runners${NC}"
   echo -e "  ${BOLD}7)${NC}  🔄  Update ci-tools    ${DIM}— Update submodule to latest main${NC}"
   echo -e "  ${BOLD}8)${NC}  ➕  Create Outbox      ${DIM}— Scaffold a new outbox project${NC}"
+  echo -e "  ${BOLD}9)${NC}  🔄  Safe Rebase        ${DIM}— Stash, rebase & pop changes${NC}"
   
   echo -e "\n  ${BOLD}0)${NC}  ❌  Exit"
   echo ""
@@ -99,6 +100,16 @@ while true; do
       ;;
     8)
       bash scripts/create-outbox.sh
+      ;;
+    9)
+      echo -e "\n${BLUE}━━━ Safe Rebase ━━━${NC}\n"
+      echo -e "${DIM}Stashing changes...${NC}"
+      git stash
+      echo -e "${DIM}Pulling with rebase...${NC}"
+      git pull --rebase origin main || git pull --rebase origin master
+      echo -e "${DIM}Restoring changes...${NC}"
+      git stash pop || echo -e "${YELLOW}No stash to pop or conflict detected.${NC}"
+      echo -e "${GREEN}Done.${NC}"
       ;;
     0)
       echo -e "\n${DIM}Bye!${NC}\n"
