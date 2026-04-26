@@ -9,6 +9,8 @@
     "start": "node dist/index.js",
     "start:local": "NODE_ENV=local tsx src/index.ts",
     "start:dev": "NODE_ENV=development tsx src/index.ts",
+    "start:test": "NODE_ENV=test tsx src/index.ts",
+    "start:prod": "NODE_ENV=production node dist/index.js",
     "test": "jest",
     "lint": "eslint \"src/**/*.ts\" --fix"
   },
@@ -26,7 +28,6 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.7",
-    "@types/pg": "^8",
     "@volontariapp/eslint-config": "2.2.2",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
