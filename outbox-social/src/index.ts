@@ -8,7 +8,7 @@ import { initDatabase } from './providers/database.provider.js';
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  
+
   const logger = new Logger({
     context: 'OUTBOX-SOCIAL',
     format: config.logger.format,
