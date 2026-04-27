@@ -12,5 +12,13 @@
     "level": "info",
     "format": "text"
   },
+  "outbox": {
+    "batchIntervalMs": 5000,
+    "batchSize": 10,
+    "logger": {
+      "level": "info",
+      "format": "text"
+    }
+  },
   "port": 4101
 }

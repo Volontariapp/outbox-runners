@@ -2,12 +2,16 @@ import { PostgresProvider } from '@volontariapp/bridge';
 import type { PostgresConfig } from '@volontariapp/config';
 import type { Logger } from '@volontariapp/logger';
 import { PostgresBridgeHealthProvider } from '@volontariapp/health-check';
+import { JobsOutboxModel, EventQueueModel } from '@volontariapp/database';
 
 export async function initDatabase(
   config: PostgresConfig,
   logger: Logger,
 ): Promise<PostgresProvider> {
-  const dbProvider = new PostgresProvider(config);
+  const dbProvider = new PostgresProvider({
+    ...config,
+    entities: [JobsOutboxModel, EventQueueModel],
+  } as any);
 
   try {
     await dbProvider.connect();
