@@ -3,10 +3,12 @@ import {
   JobsOutboxEntity,
   JobsOutboxModel,
   OutboxRunner,
+  OutboxDispatcher,
   databaseMapper,
   type Repository,
 } from '@volontariapp/database';
 import type { OutboxRunnerConfig } from '@volontariapp/config';
+import type { Logger } from '@volontariapp/logger';
 
 databaseMapper.registerBidirectional(JobsOutboxModel, JobsOutboxEntity);
 
@@ -24,8 +26,13 @@ export class UserOutboxRunner extends OutboxRunner<
   JobsOutboxModel,
   JobsOutboxEntity
 > {
-  constructor(repository: Repository<JobsOutboxModel>, config: OutboxRunnerConfig) {
+  constructor(
+    repository: Repository<JobsOutboxModel>,
+    config: OutboxRunnerConfig,
+    logger: Logger,
+  ) {
     const outboxRepository = new JobsOutboxRepository(repository);
-    super(outboxRepository, config);
+    const dispatcher = new OutboxDispatcher(logger, outboxRepository);
+    super(outboxRepository, config, dispatcher);
   }
 }

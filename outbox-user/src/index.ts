@@ -21,7 +21,7 @@ async function bootstrap() {
   const dataSource = dbProvider.getDriver();
   const repository = dataSource.getRepository(JobsOutboxModel);
 
-  const runner = new UserOutboxRunner(repository, config.outbox);
+  const runner = new UserOutboxRunner(repository, config.outbox, logger);
 
   // Start the runner
   runner.start();
