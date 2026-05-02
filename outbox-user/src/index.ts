@@ -1,9 +1,11 @@
 import 'reflect-metadata';
 import { loadConfig } from '@volontariapp/config';
 import { Logger } from '@volontariapp/logger';
+import { JobsOutboxModel } from '@volontariapp/database';
 import { CustomConfig } from './config/custom-config.js';
 import { resolveConfigDirectory } from './config/resolve-config-directory.js';
 import { initDatabase } from './providers/database.provider.js';
+import { UserOutboxRunner } from './runners/user-outbox.runner.js';
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
@@ -12,21 +14,33 @@ async function bootstrap() {
     context: 'OUTBOX-USER',
     format: config.logger.format,
   });
-  logger.info('Outbox runner for user starting (Lean Mode)...');
+
+  logger.info('Outbox runner for user starting...');
+
   const dbProvider = await initDatabase(config.db, logger);
+  const dataSource = dbProvider.getDriver();
+  const repository = dataSource.getRepository(JobsOutboxModel);
+
+  const runner = new UserOutboxRunner(repository, config.outbox, logger);
+
+  // Start the runner
+  runner.start();
+
   const interval = setInterval(() => {
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
       process.exit(1);
     }
-    logger.info('Checking for new outbox messages...');
   }, 10000);
+
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
+    await runner.stop();
     clearInterval(interval);
     await dbProvider.disconnect();
     process.exit(0);
   };
+
   process.on('SIGTERM', () => {
     void shutdown('SIGTERM');
   });
