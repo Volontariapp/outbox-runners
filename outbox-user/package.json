@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@volontariapp/bridge": "0.2.8",
-    "@volontariapp/config": "2.0.0",
-    "@volontariapp/database": "1.10.0",
+    "@volontariapp/config": "2.1.0",
+    "@volontariapp/database": "1.11.0",
     "@volontariapp/health-check": "0.1.10",
     "@volontariapp/logger": "0.2.3",
     "class-transformer": "^0.5.1",

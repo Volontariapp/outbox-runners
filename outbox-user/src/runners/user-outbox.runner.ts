@@ -3,9 +3,12 @@ import {
   JobsOutboxEntity,
   JobsOutboxModel,
   OutboxRunner,
+  databaseMapper,
   type Repository,
 } from '@volontariapp/database';
 import type { OutboxRunnerConfig } from '@volontariapp/config';
+
+databaseMapper.registerBidirectional(JobsOutboxModel, JobsOutboxEntity);
 
 export class JobsOutboxRepository extends BaseRepository<
   JobsOutboxModel,

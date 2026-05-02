@@ -24,10 +24,7 @@ async function bootstrap() {
   const runner = new UserOutboxRunner(repository, config.outbox);
 
   // Start the runner
-  void runner.start().catch((err: unknown) => {
-    logger.error('Outbox runner failed', { err });
-    process.exit(1);
-  });
+  runner.start();
 
   const interval = setInterval(() => {
     if (!dbProvider.isConnected()) {
@@ -38,7 +35,7 @@ async function bootstrap() {
 
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
-    runner.stop();
+    await runner.stop();
     clearInterval(interval);
     await dbProvider.disconnect();
     process.exit(0);
