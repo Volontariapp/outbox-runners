@@ -1,9 +1,11 @@
+import { Redis } from 'ioredis';
 import {
   BaseRepository,
   JobsOutboxEntity,
   JobsOutboxModel,
   OutboxRunner,
   OutboxDispatcher,
+  OutboxPusher,
   databaseMapper,
   type Repository,
 } from '@volontariapp/database';
@@ -22,6 +24,29 @@ export class JobsOutboxRepository extends BaseRepository<
   }
 }
 
+export class UserOutboxPusher extends OutboxPusher<JobsOutboxEntity> {
+  private readonly redis: Redis;
+
+  constructor() {
+    super();
+    this.redis = new Redis({
+      port: 6379,
+    });
+  }
+
+  public override async pushElement(entity: JobsOutboxEntity): Promise<void> {
+    await this.redis.set(`outbox:${entity.id}`, JSON.stringify(entity));
+  }
+
+  public override async pushBulkElement(entities: JobsOutboxEntity[]): Promise<void> {
+    const pipeline = this.redis.pipeline();
+    for (const entity of entities) {
+      pipeline.set(`outbox:${entity.id}`, JSON.stringify(entity));
+    }
+    await pipeline.exec();
+  }
+}
+
 export class UserOutboxRunner extends OutboxRunner<
   JobsOutboxModel,
   JobsOutboxEntity
@@ -33,6 +58,7 @@ export class UserOutboxRunner extends OutboxRunner<
   ) {
     const outboxRepository = new JobsOutboxRepository(repository);
     const dispatcher = new OutboxDispatcher(logger, outboxRepository);
-    super(outboxRepository, config, dispatcher);
+    const pusher = new UserOutboxPusher();
+    super(outboxRepository, config, dispatcher, pusher);
   }
 }

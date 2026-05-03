@@ -763,9 +763,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/database@npm:1.11.0":
-  version: 1.11.0
-  resolution: "@volontariapp/database@npm:1.11.0"
+"@volontariapp/database@npm:1.13.0-snap-2c644e5":
+  version: 1.13.0-snap-2c644e5
+  resolution: "@volontariapp/database@npm:1.13.0-snap-2c644e5"
   dependencies:
     "@volontariapp/bridge": "npm:0.2.10"
     "@volontariapp/config": "npm:2.1.0"
@@ -777,7 +777,7 @@ __metadata:
     reflect-metadata: "npm:^0.2.2"
   peerDependencies:
     typeorm: ^0.3.28
-  checksum: 10c0/f5714626c555ca4206df8bae8c9b4a357b0ef43de3e1a576c3346ab55177398aa3373933405ecc783e09fa9c15f8b7fcf5195c0535021ef77dd27d825bde46cd
+  checksum: 10c0/b3753a0f484e1e125ed7b7db2fefaba06f2990a08c069dadff7c01c6620b70852d34c48c96646587c5e0b078e809d79e8a94670e050608ddc30f2be86a884cea
   languageName: node
   linkType: hard
 
@@ -2907,7 +2907,7 @@ __metadata:
     "@types/node": "npm:^22.10.7"
     "@volontariapp/bridge": "npm:0.2.8"
     "@volontariapp/config": "npm:2.1.0"
-    "@volontariapp/database": "npm:1.11.0"
+    "@volontariapp/database": "npm:1.13.0-snap-2c644e5"
     "@volontariapp/eslint-config": "npm:2.2.2"
     "@volontariapp/health-check": "npm:0.1.10"
     "@volontariapp/logger": "npm:0.2.3"
@@ -2917,6 +2917,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.0.1"
     eslint-plugin-prettier: "npm:^5.2.2"
     globals: "npm:^16.0.0"
+    ioredis: "npm:^5.10.1"
     pg: "npm:^8.20.0"
     prettier: "npm:^3.4.2"
     reflect-metadata: "npm:^0.2.2"
