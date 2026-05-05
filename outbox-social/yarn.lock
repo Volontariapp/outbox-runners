@@ -353,6 +353,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@msgpackr-extract/msgpackr-extract-darwin-arm64@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-darwin-arm64@npm:3.0.3"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@msgpackr-extract/msgpackr-extract-darwin-x64@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-darwin-x64@npm:3.0.3"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@msgpackr-extract/msgpackr-extract-linux-arm64@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-linux-arm64@npm:3.0.3"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@msgpackr-extract/msgpackr-extract-linux-arm@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-linux-arm@npm:3.0.3"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@msgpackr-extract/msgpackr-extract-linux-x64@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-linux-x64@npm:3.0.3"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@msgpackr-extract/msgpackr-extract-win32-x64@npm:3.0.3":
+  version: 3.0.3
+  resolution: "@msgpackr-extract/msgpackr-extract-win32-x64@npm:3.0.3"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -699,26 +741,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/bridge@npm:0.2.8":
-  version: 0.2.8
-  resolution: "@volontariapp/bridge@npm:0.2.8"
+"@volontariapp/bridge@npm:0.2.10":
+  version: 0.2.10
+  resolution: "@volontariapp/bridge@npm:0.2.10"
   dependencies:
     "@types/geojson": "npm:^7946.0.16"
-    "@volontariapp/config": "npm:2.0.0"
-    "@volontariapp/errors": "npm:0.4.4"
+    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/errors": "npm:0.5.0"
     "@volontariapp/logger": "npm:0.2.3"
     ioredis: "npm:^5.10.1"
     neo4j-driver: "npm:^6.0.1"
     pg: "npm:^8.20.0"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.28"
-  checksum: 10c0/8c0db56cfa5a7ade42c3b6283ad9fa6ff7bbafe7d3859a37dd291be390962f5281e7022df08e0e53dc3df373fe0d1e75912dea1d13a32e471e2e211c337dcb35
+  checksum: 10c0/9d77a33052e9b5bd07ba8da62eb76b1855a0d1a29d1c7319a2ca6eb949a3fe87c0ed9c5365366b7ab89dee6f9a95cf9070060c2bc2b5de4d5223f7c3f2801998
   languageName: node
   linkType: hard
 
-"@volontariapp/config@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@volontariapp/config@npm:2.0.0"
+"@volontariapp/config@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@volontariapp/config@npm:2.1.0"
   dependencies:
     "@volontariapp/logger": "npm:0.2.3"
     class-transformer: "npm:^0.5.1"
@@ -727,22 +769,40 @@ __metadata:
     neo4j-driver: "npm:^6.0.1"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.28"
-  checksum: 10c0/4ff8f71fcb15642df432c38a74c5f0a4ffb282138b7acd84e5a159e915af1ff1abd935e1623ef1a8a81e9b2a4537f76cd75c06076e0976f2f0746aca0861477b
+  checksum: 10c0/a1a49f1aae05d0e0993950b626c2fb238d7537f42d36dec60c2b531639d5a2eb5e636a9edcbc4baf205aba26fecf166530f5dae9fcbb1d9afae20875717cb072
   languageName: node
   linkType: hard
 
-"@volontariapp/errors@npm:0.4.4":
-  version: 0.4.4
-  resolution: "@volontariapp/errors@npm:0.4.4"
+"@volontariapp/database@npm:1.14.0":
+  version: 1.14.0
+  resolution: "@volontariapp/database@npm:1.14.0"
+  dependencies:
+    "@volontariapp/bridge": "npm:0.2.10"
+    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/errors": "npm:0.5.0"
+    "@volontariapp/logger": "npm:0.2.3"
+    class-transformer: "npm:^0.5.1"
+    class-validator: "npm:^0.14.1"
+    pg: "npm:^8.20.0"
+    reflect-metadata: "npm:^0.2.2"
+  peerDependencies:
+    typeorm: ^0.3.28
+  checksum: 10c0/5cb4a4e10eb8fb16b8538ee62331754381d73e40e479db9cf39c332d65091ee866d41af7c9d78d0177ad453b9fe9c1c9136206db056c8c4aa538f7143e44a94c
+  languageName: node
+  linkType: hard
+
+"@volontariapp/errors@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@volontariapp/errors@npm:0.5.0"
   dependencies:
     "@volontariapp/logger": "npm:0.2.3"
-  checksum: 10c0/ac38f93c7c883f6305dab7f9c22d33d1e2c6a6258a8bd4f82adef188b22e49fa6777257b432599ab71fca5be5d875d7b8f52380dcbfe9be63233e1d48561b7cd
+  checksum: 10c0/0f5dec36b2e1a878bbdb2e034a3a7681e590717d7d9c7eadc30cf8c9276286cd5136b34e76dc6d28961f97f841f3a1391beda0aea714b4d89a7755e2f2b23380
   languageName: node
   linkType: hard
 
-"@volontariapp/eslint-config@npm:2.2.2":
-  version: 2.2.2
-  resolution: "@volontariapp/eslint-config@npm:2.2.2"
+"@volontariapp/eslint-config@npm:2.2.3":
+  version: 2.2.3
+  resolution: "@volontariapp/eslint-config@npm:2.2.3"
   dependencies:
     "@eslint/js": "npm:9.18.0"
     eslint-plugin-import: "npm:^2.32.0"
@@ -750,18 +810,18 @@ __metadata:
   peerDependencies:
     eslint: ">=9.0.0"
     typescript: ">=5.0.0"
-  checksum: 10c0/50223d7f48b896af1390420d2c7305100972c2019da6f8a97418f9e5cd5ab111b838b90b909bcc081001cc96ace38ef1637d4f3d7f118ae8603345ca4e0a656c
+  checksum: 10c0/5af08e1b06e6779a1e05d538e1d7de3346ccb4f753d5ee2f369d43726ba15714413b4a6e50f095e0306a1a603167ae5c98f2766867877a77d236c850ecae733c
   languageName: node
   linkType: hard
 
-"@volontariapp/health-check@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@volontariapp/health-check@npm:0.1.10"
+"@volontariapp/health-check@npm:0.1.12":
+  version: 0.1.12
+  resolution: "@volontariapp/health-check@npm:0.1.12"
   dependencies:
-    "@volontariapp/bridge": "npm:0.2.8"
-    "@volontariapp/config": "npm:2.0.0"
-    "@volontariapp/errors": "npm:0.4.4"
-  checksum: 10c0/d35319acfc53eb1472f734926663e58c10bd20e142b8fc7d6fc80d4898b3954ca51dc827e22c88e36b5ea81bdeb27851bee23e557b4123f92b9dd3c89b623bd4
+    "@volontariapp/bridge": "npm:0.2.10"
+    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/errors": "npm:0.5.0"
+  checksum: 10c0/c6458a7fef9f83d51e299c87921b46bfe21879ac3587ee159972dd03e936830061bad68ba1260d90c151193d08c5066ffad0048fbca584474bd9e87739d74938
   languageName: node
   linkType: hard
 
@@ -769,6 +829,20 @@ __metadata:
   version: 0.2.3
   resolution: "@volontariapp/logger@npm:0.2.3"
   checksum: 10c0/9e4a0e25d37745bf2bc53614d44c6b460884dbe629ef2d1fa530e0a9cde4358d7c11ad3e45dcae20f571da8b0648a5e800d1c43f3acd2eddde8316e0b2179346
+  languageName: node
+  linkType: hard
+
+"@volontariapp/outbox@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@volontariapp/outbox@npm:0.5.0"
+  dependencies:
+    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/database": "npm:1.14.0"
+    "@volontariapp/errors": "npm:0.5.0"
+    "@volontariapp/logger": "npm:0.2.3"
+    bullmq: "npm:^5.76.5"
+    ioredis: "npm:^5.10.1"
+  checksum: 10c0/a9efd34988f4b25b5502f935c56c669f542e54655dac468d9d7a934f48b03b8505be6baf6c180b6e74672738045b2d55a1d07d8f1cc5b4218ae19e6a693715fd
   languageName: node
   linkType: hard
 
@@ -1031,6 +1105,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bullmq@npm:^5.76.5":
+  version: 5.76.5
+  resolution: "bullmq@npm:5.76.5"
+  dependencies:
+    cron-parser: "npm:4.9.0"
+    ioredis: "npm:5.10.1"
+    msgpackr: "npm:1.11.12"
+    node-abort-controller: "npm:3.1.1"
+    semver: "npm:7.7.4"
+    tslib: "npm:2.8.1"
+  checksum: 10c0/23ab65c78a93cfeddbc1f1031e9c45282b09a9d3e91db28ccad7c93b21a89d0d3e588c7694ec401f5486832460ccfbd3dfd0470d2315de6a1235850b5634a903
+  languageName: node
+  linkType: hard
+
 "call-bind-apply-helpers@npm:^1.0.1, call-bind-apply-helpers@npm:^1.0.2":
   version: 1.0.2
   resolution: "call-bind-apply-helpers@npm:1.0.2"
@@ -1094,6 +1182,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-validator@npm:^0.14.1":
+  version: 0.14.4
+  resolution: "class-validator@npm:0.14.4"
+  dependencies:
+    "@types/validator": "npm:^13.15.3"
+    libphonenumber-js: "npm:^1.11.1"
+    validator: "npm:^13.15.22"
+  checksum: 10c0/1d415261aad7bdd72528db76e814195ca627a9d33f159752554dbbf71b8360359d3061a8edd16ac951a9a4fb86e0495cdf8badf82ec44e2dcc187ab496f37c5a
+  languageName: node
+  linkType: hard
+
 "class-validator@npm:^0.15.1":
   version: 0.15.1
   resolution: "class-validator@npm:0.15.1"
@@ -1143,6 +1242,15 @@ __metadata:
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
   checksum: 10c0/c996b1cfdf95b6c90fee4dae37e332c8b6eb7d106430c17d538034c0ad9a1630cb194d2ab37293b1bdd4d779494beee7786d586a50bd9376fd6f7bcc2bd4c98f
+  languageName: node
+  linkType: hard
+
+"cron-parser@npm:4.9.0":
+  version: 4.9.0
+  resolution: "cron-parser@npm:4.9.0"
+  dependencies:
+    luxon: "npm:^3.2.1"
+  checksum: 10c0/348622bdcd1a15695b61fc33af8a60133e5913a85cf99f6344367579e7002896514ba3b0a9d6bb569b02667d6b06836722bf2295fcd101b3de378f71d37bed0b
   languageName: node
   linkType: hard
 
@@ -1263,6 +1371,13 @@ __metadata:
   version: 2.1.0
   resolution: "denque@npm:2.1.0"
   checksum: 10c0/f9ef81aa0af9c6c614a727cb3bd13c5d7db2af1abf9e6352045b86e85873e629690f6222f4edd49d10e4ccf8f078bbeec0794fafaf61b659c0589d0c511ec363
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^2.0.1":
+  version: 2.1.2
+  resolution: "detect-libc@npm:2.1.2"
+  checksum: 10c0/acc675c29a5649fa1fb6e255f993b8ee829e510b6b56b0910666949c80c364738833417d0edb5f90e4e46be17228b0f2b66a010513984e18b15deeeac49369c4
   languageName: node
   linkType: hard
 
@@ -2184,7 +2299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ioredis@npm:^5.10.1":
+"ioredis@npm:5.10.1, ioredis@npm:^5.10.1":
   version: 5.10.1
   resolution: "ioredis@npm:5.10.1"
   dependencies:
@@ -2581,6 +2696,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:^3.2.1":
+  version: 3.7.2
+  resolution: "luxon@npm:3.7.2"
+  checksum: 10c0/ed8f0f637826c08c343a29dd478b00628be93bba6f068417b1d8896b61cb61c6deacbe1df1e057dbd9298334044afa150f9aaabbeb3181418ac8520acfdc2ae2
+  languageName: node
+  linkType: hard
+
 "math-intrinsics@npm:^1.1.0":
   version: 1.1.0
   resolution: "math-intrinsics@npm:1.1.0"
@@ -2662,6 +2784,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"msgpackr-extract@npm:^3.0.2":
+  version: 3.0.3
+  resolution: "msgpackr-extract@npm:3.0.3"
+  dependencies:
+    "@msgpackr-extract/msgpackr-extract-darwin-arm64": "npm:3.0.3"
+    "@msgpackr-extract/msgpackr-extract-darwin-x64": "npm:3.0.3"
+    "@msgpackr-extract/msgpackr-extract-linux-arm": "npm:3.0.3"
+    "@msgpackr-extract/msgpackr-extract-linux-arm64": "npm:3.0.3"
+    "@msgpackr-extract/msgpackr-extract-linux-x64": "npm:3.0.3"
+    "@msgpackr-extract/msgpackr-extract-win32-x64": "npm:3.0.3"
+    node-gyp: "npm:latest"
+    node-gyp-build-optional-packages: "npm:5.2.2"
+  dependenciesMeta:
+    "@msgpackr-extract/msgpackr-extract-darwin-arm64":
+      optional: true
+    "@msgpackr-extract/msgpackr-extract-darwin-x64":
+      optional: true
+    "@msgpackr-extract/msgpackr-extract-linux-arm":
+      optional: true
+    "@msgpackr-extract/msgpackr-extract-linux-arm64":
+      optional: true
+    "@msgpackr-extract/msgpackr-extract-linux-x64":
+      optional: true
+    "@msgpackr-extract/msgpackr-extract-win32-x64":
+      optional: true
+  bin:
+    download-msgpackr-prebuilds: bin/download-prebuilds.js
+  checksum: 10c0/e504fd8bf86a29d7527c83776530ee6dc92dcb0273bb3679fd4a85173efead7f0ee32fb82c8410a13c33ef32828c45f81118ffc0fbed5d6842e72299894623b4
+  languageName: node
+  linkType: hard
+
+"msgpackr@npm:1.11.12":
+  version: 1.11.12
+  resolution: "msgpackr@npm:1.11.12"
+  dependencies:
+    msgpackr-extract: "npm:^3.0.2"
+  dependenciesMeta:
+    msgpackr-extract:
+      optional: true
+  checksum: 10c0/e9f1460e363dbd8c81a5c1b5829980edea7d76e91d570d094d0a4dae0d8ad12f64dea11b2be15f3d7b48d615fa9d3c9b600a6894fd272526087fa33753b5fd16
+  languageName: node
+  linkType: hard
+
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -2698,6 +2863,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-abort-controller@npm:3.1.1":
+  version: 3.1.1
+  resolution: "node-abort-controller@npm:3.1.1"
+  checksum: 10c0/f7ad0e7a8e33809d4f3a0d1d65036a711c39e9d23e0319d80ebe076b9a3b4432b4d6b86a7fab65521de3f6872ffed36fc35d1327487c48eb88c517803403eda3
+  languageName: node
+  linkType: hard
+
 "node-exports-info@npm:^1.6.0":
   version: 1.6.0
   resolution: "node-exports-info@npm:1.6.0"
@@ -2707,6 +2879,19 @@ __metadata:
     object.entries: "npm:^1.1.9"
     semver: "npm:^6.3.1"
   checksum: 10c0/3613f21c60b047e66f168d3499a6be0060d89fb01ddceaa7032c2fb318aff12e4b9b111449c1a9aeb3b848bfdc1d4b6bc8fab327af692319597d21a1e7063692
+  languageName: node
+  linkType: hard
+
+"node-gyp-build-optional-packages@npm:5.2.2":
+  version: 5.2.2
+  resolution: "node-gyp-build-optional-packages@npm:5.2.2"
+  dependencies:
+    detect-libc: "npm:^2.0.1"
+  bin:
+    node-gyp-build-optional-packages: bin.js
+    node-gyp-build-optional-packages-optional: optional.js
+    node-gyp-build-optional-packages-test: build-test.js
+  checksum: 10c0/c81128c6f91873381be178c5eddcbdf66a148a6a89a427ce2bcd457593ce69baf2a8662b6d22cac092d24aa9c43c230dec4e69b3a0da604503f4777cd77e282b
   languageName: node
   linkType: hard
 
@@ -2835,11 +3020,13 @@ __metadata:
   resolution: "outbox-social@workspace:."
   dependencies:
     "@types/node": "npm:^22.10.7"
-    "@volontariapp/bridge": "npm:0.2.8"
-    "@volontariapp/config": "npm:2.0.0"
-    "@volontariapp/eslint-config": "npm:2.2.2"
-    "@volontariapp/health-check": "npm:0.1.10"
+    "@volontariapp/bridge": "npm:0.2.10"
+    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/database": "npm:1.14.0"
+    "@volontariapp/eslint-config": "npm:2.2.3"
+    "@volontariapp/health-check": "npm:0.1.12"
     "@volontariapp/logger": "npm:0.2.3"
+    "@volontariapp/outbox": "npm:0.5.0"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
     eslint: "npm:^9.18.0"
@@ -3283,21 +3470,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:7.7.4, semver@npm:^7.3.5, semver@npm:^7.6.0, semver@npm:^7.7.3":
+  version: 7.7.4
+  resolution: "semver@npm:7.7.4"
+  bin:
+    semver: bin/semver.js
+  checksum: 10c0/5215ad0234e2845d4ea5bb9d836d42b03499546ddafb12075566899fc617f68794bb6f146076b6881d755de17d6c6cc73372555879ec7dce2c2feee947866ad2
+  languageName: node
+  linkType: hard
+
 "semver@npm:^6.3.1":
   version: 6.3.1
   resolution: "semver@npm:6.3.1"
   bin:
     semver: bin/semver.js
   checksum: 10c0/e3d79b609071caa78bcb6ce2ad81c7966a46a7431d9d58b8800cfa9cb6a63699b3899a0e4bcce36167a284578212d9ae6942b6929ba4aa5015c079a67751d42d
-  languageName: node
-  linkType: hard
-
-"semver@npm:^7.3.5, semver@npm:^7.6.0, semver@npm:^7.7.3":
-  version: 7.7.4
-  resolution: "semver@npm:7.7.4"
-  bin:
-    semver: bin/semver.js
-  checksum: 10c0/5215ad0234e2845d4ea5bb9d836d42b03499546ddafb12075566899fc617f68794bb6f146076b6881d755de17d6c6cc73372555879ec7dce2c2feee947866ad2
   languageName: node
   linkType: hard
 
@@ -3643,7 +3830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.8.1":
+"tslib@npm:2.8.1, tslib@npm:^2.1.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62

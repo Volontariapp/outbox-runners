@@ -4,6 +4,7 @@ import {
   BaseConfig,
   PostgresConfig,
   OutboxRunnerConfig,
+  RedisConfig,
 } from '@volontariapp/config';
 
 export class CustomConfig extends BaseConfig {
@@ -16,4 +17,9 @@ export class CustomConfig extends BaseConfig {
   @ValidateNested()
   @Type(() => OutboxRunnerConfig)
   outbox!: OutboxRunnerConfig;
+
+  @IsDefined()
+  @ValidateNested()
+  @Type(() => RedisConfig)
+  redis!: RedisConfig;
 }
