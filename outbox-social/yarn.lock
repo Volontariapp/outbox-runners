@@ -436,6 +436,79 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@protobufjs/aspromise@npm:1.1.2"
+  checksum: 10c0/a83343a468ff5b5ec6bff36fd788a64c839e48a07ff9f4f813564f58caf44d011cd6504ed2147bf34835bd7a7dd2107052af755961c6b098fd8902b4f6500d0f
+  languageName: node
+  linkType: hard
+
+"@protobufjs/base64@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@protobufjs/base64@npm:1.1.2"
+  checksum: 10c0/eec925e681081af190b8ee231f9bad3101e189abbc182ff279da6b531e7dbd2a56f1f306f37a80b1be9e00aa2d271690d08dcc5f326f71c9eed8546675c8caf6
+  languageName: node
+  linkType: hard
+
+"@protobufjs/codegen@npm:^2.0.4":
+  version: 2.0.5
+  resolution: "@protobufjs/codegen@npm:2.0.5"
+  checksum: 10c0/1b8a2ae56ee60a56e9d205cd4b6072a1503c5069b8ebb905710f974ff0098a0d0700641c137e0a8d98dedf14423156a106a9433695cbf52574810f55000fdcab
+  languageName: node
+  linkType: hard
+
+"@protobufjs/eventemitter@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@protobufjs/eventemitter@npm:1.1.0"
+  checksum: 10c0/1eb0a75180e5206d1033e4138212a8c7089a3d418c6dfa5a6ce42e593a4ae2e5892c4ef7421f38092badba4040ea6a45f0928869989411001d8c1018ea9a6e70
+  languageName: node
+  linkType: hard
+
+"@protobufjs/fetch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@protobufjs/fetch@npm:1.1.0"
+  dependencies:
+    "@protobufjs/aspromise": "npm:^1.1.1"
+    "@protobufjs/inquire": "npm:^1.1.0"
+  checksum: 10c0/cda6a3dc2d50a182c5865b160f72077aac197046600091dbb005dd0a66db9cce3c5eaed6d470ac8ed49d7bcbeef6ee5f0bc288db5ff9a70cbd003e5909065233
+  languageName: node
+  linkType: hard
+
+"@protobufjs/float@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@protobufjs/float@npm:1.0.2"
+  checksum: 10c0/18f2bdede76ffcf0170708af15c9c9db6259b771e6b84c51b06df34a9c339dbbeec267d14ce0bddd20acc142b1d980d983d31434398df7f98eb0c94a0eb79069
+  languageName: node
+  linkType: hard
+
+"@protobufjs/inquire@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "@protobufjs/inquire@npm:1.1.1"
+  checksum: 10c0/a638d981adabdbdd61fba04e5045e0d2f98fa557eb0e705482a6dc25e84318bc736b0cd4aaee5d6b9941f121b488ece872c203af2a665b6dfefa95c903bb0cc8
+  languageName: node
+  linkType: hard
+
+"@protobufjs/path@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@protobufjs/path@npm:1.1.2"
+  checksum: 10c0/cece0a938e7f5dfd2fa03f8c14f2f1cf8b0d6e13ac7326ff4c96ea311effd5fb7ae0bba754fbf505312af2e38500250c90e68506b97c02360a43793d88a0d8b4
+  languageName: node
+  linkType: hard
+
+"@protobufjs/pool@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@protobufjs/pool@npm:1.1.0"
+  checksum: 10c0/eda2718b7f222ac6e6ad36f758a92ef90d26526026a19f4f17f668f45e0306a5bd734def3f48f51f8134ae0978b6262a5c517c08b115a551756d1a3aadfcf038
+  languageName: node
+  linkType: hard
+
+"@protobufjs/utf8@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "@protobufjs/utf8@npm:1.1.1"
+  checksum: 10c0/641fc145f00626405e8984b6e90b9edcbcc072ffc82d0647ca3176e09c730b2d022f988e65f011a7a17e2e4d77cde7733643aa10d8ac2bfa30f134dbcad553fd
+  languageName: node
+  linkType: hard
+
 "@rtsao/scc@npm:^1.1.0":
   version: 1.1.0
   resolution: "@rtsao/scc@npm:1.1.0"
@@ -475,6 +548,15 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: 10c0/6bf5337bc447b706bb5b4431d37686aa2ea6d07cfd6f79cc31de80170d6ff9b1c7384a9c0ccbc45b3f512bae9e9f75c2e12109806a15331dc94e8a8db6dbb4ac
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:>=13.7.0":
+  version: 25.6.0
+  resolution: "@types/node@npm:25.6.0"
+  dependencies:
+    undici-types: "npm:~7.19.0"
+  checksum: 10c0/d2d2015630ff098a201407f55f5077a20270ae4f465c739b40865cd9933b91b9c5d2b85568eadaf3db0801b91e267333ca7eb39f007428b173d1cdab4b339ac5
   languageName: node
   linkType: hard
 
@@ -741,12 +823,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/bridge@npm:0.2.10":
-  version: 0.2.10
-  resolution: "@volontariapp/bridge@npm:0.2.10"
+"@volontariapp/bridge@npm:1.0.0-snap-4eec624":
+  version: 1.0.0-snap-4eec624
+  resolution: "@volontariapp/bridge@npm:1.0.0-snap-4eec624"
   dependencies:
     "@types/geojson": "npm:^7946.0.16"
-    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/config": "npm:3.0.0-snap-4eec624"
     "@volontariapp/errors": "npm:0.5.0"
     "@volontariapp/logger": "npm:0.2.3"
     ioredis: "npm:^5.10.1"
@@ -754,13 +836,13 @@ __metadata:
     pg: "npm:^8.20.0"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.28"
-  checksum: 10c0/9d77a33052e9b5bd07ba8da62eb76b1855a0d1a29d1c7319a2ca6eb949a3fe87c0ed9c5365366b7ab89dee6f9a95cf9070060c2bc2b5de4d5223f7c3f2801998
+  checksum: 10c0/3b0af3da918ca099acfe805eac422453e402d657d568fde39c7d2c768e2e261e20b040cc0dd8fc54217e540a4c6151f1de0e689af554e12f0379423ea1a98154
   languageName: node
   linkType: hard
 
-"@volontariapp/config@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@volontariapp/config@npm:2.1.0"
+"@volontariapp/config@npm:3.0.0-snap-4eec624":
+  version: 3.0.0-snap-4eec624
+  resolution: "@volontariapp/config@npm:3.0.0-snap-4eec624"
   dependencies:
     "@volontariapp/logger": "npm:0.2.3"
     class-transformer: "npm:^0.5.1"
@@ -769,25 +851,36 @@ __metadata:
     neo4j-driver: "npm:^6.0.1"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.28"
-  checksum: 10c0/a1a49f1aae05d0e0993950b626c2fb238d7537f42d36dec60c2b531639d5a2eb5e636a9edcbc4baf205aba26fecf166530f5dae9fcbb1d9afae20875717cb072
+  checksum: 10c0/8256e437860aea067883bba6c0415d1ea7dd523a4f5b69cbf15bd8b392d1ee98fb6c624184643ff52797b25f528c6d1dd06a3810d16bd9bedc55b6d8d2dc923c
   languageName: node
   linkType: hard
 
-"@volontariapp/database@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@volontariapp/database@npm:1.14.0"
+"@volontariapp/contracts@npm:4.0.9":
+  version: 4.0.9
+  resolution: "@volontariapp/contracts@npm:4.0.9"
   dependencies:
-    "@volontariapp/bridge": "npm:0.2.10"
-    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/logger": "npm:0.2.3"
+    protobufjs: "npm:7.5.3"
+  checksum: 10c0/7ec3a98408c474e9218a9ca363723b74a88346ccdc25e5f3ed3f8e3f9b73e1670966f35fdccc19d5797b30563a78f9cea185cc043fba089f2aa5955907eb7385
+  languageName: node
+  linkType: hard
+
+"@volontariapp/database@npm:1.15.0-snap-4eec624":
+  version: 1.15.0-snap-4eec624
+  resolution: "@volontariapp/database@npm:1.15.0-snap-4eec624"
+  dependencies:
+    "@volontariapp/bridge": "npm:1.0.0-snap-4eec624"
+    "@volontariapp/config": "npm:3.0.0-snap-4eec624"
     "@volontariapp/errors": "npm:0.5.0"
     "@volontariapp/logger": "npm:0.2.3"
+    "@volontariapp/shared": "npm:0.4.0-snap-4eec624"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.14.1"
     pg: "npm:^8.20.0"
     reflect-metadata: "npm:^0.2.2"
   peerDependencies:
     typeorm: ^0.3.28
-  checksum: 10c0/5cb4a4e10eb8fb16b8538ee62331754381d73e40e479db9cf39c332d65091ee866d41af7c9d78d0177ad453b9fe9c1c9136206db056c8c4aa538f7143e44a94c
+  checksum: 10c0/ac5d07537c594962ed2a15bb39507ed6287bf5af1859e4cd127e5e51a7b8c345f4415651b2f10113e2879b7957604803286c66b19daf6be7d037d5a70222387c
   languageName: node
   linkType: hard
 
@@ -814,14 +907,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/health-check@npm:0.1.12":
-  version: 0.1.12
-  resolution: "@volontariapp/health-check@npm:0.1.12"
+"@volontariapp/health-check@npm:1.0.0-snap-4eec624":
+  version: 1.0.0-snap-4eec624
+  resolution: "@volontariapp/health-check@npm:1.0.0-snap-4eec624"
   dependencies:
-    "@volontariapp/bridge": "npm:0.2.10"
-    "@volontariapp/config": "npm:2.1.0"
+    "@volontariapp/bridge": "npm:1.0.0-snap-4eec624"
+    "@volontariapp/config": "npm:3.0.0-snap-4eec624"
     "@volontariapp/errors": "npm:0.5.0"
-  checksum: 10c0/c6458a7fef9f83d51e299c87921b46bfe21879ac3587ee159972dd03e936830061bad68ba1260d90c151193d08c5066ffad0048fbca584474bd9e87739d74938
+  checksum: 10c0/395a629081a6234c8aab4db1226896a293980cba8a83e3e38bef589d4c2a2398f966a42892fd2f562291c25990efebef11671c14caf65844b3bbe0047d5f4b76
   languageName: node
   linkType: hard
 
@@ -832,17 +925,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/outbox@npm:0.5.0":
-  version: 0.5.0
-  resolution: "@volontariapp/outbox@npm:0.5.0"
+"@volontariapp/messaging@npm:1.1.0-snap-4eec624":
+  version: 1.1.0-snap-4eec624
+  resolution: "@volontariapp/messaging@npm:1.1.0-snap-4eec624"
   dependencies:
-    "@volontariapp/config": "npm:2.1.0"
-    "@volontariapp/database": "npm:1.14.0"
+    "@volontariapp/contracts": "npm:4.0.9"
+    "@volontariapp/database": "npm:1.15.0-snap-4eec624"
+  checksum: 10c0/7ad91940c15426896e4f3dd01bae3385e65beff9b806d489f9b769fbc2b18bb702cef420a20a51cb5b85c7ace41e974e58aa0ac948be8806b07f127b069afd37
+  languageName: node
+  linkType: hard
+
+"@volontariapp/outbox@npm:0.6.1-snap-4eec624":
+  version: 0.6.1-snap-4eec624
+  resolution: "@volontariapp/outbox@npm:0.6.1-snap-4eec624"
+  dependencies:
+    "@volontariapp/config": "npm:3.0.0-snap-4eec624"
+    "@volontariapp/database": "npm:1.15.0-snap-4eec624"
     "@volontariapp/errors": "npm:0.5.0"
     "@volontariapp/logger": "npm:0.2.3"
+    "@volontariapp/messaging": "npm:1.1.0-snap-4eec624"
+    "@volontariapp/shared": "npm:0.4.0-snap-4eec624"
     bullmq: "npm:^5.76.5"
     ioredis: "npm:^5.10.1"
-  checksum: 10c0/a9efd34988f4b25b5502f935c56c669f542e54655dac468d9d7a934f48b03b8505be6baf6c180b6e74672738045b2d55a1d07d8f1cc5b4218ae19e6a693715fd
+  checksum: 10c0/2cd754a8f7fc1cdce6bf67be818eb8d594213dd3bf52546156e67da768c66d19849c8a77f01afd9b7d863e99cb9006dde5c584c53759ea3fb78edf99f4e844b9
+  languageName: node
+  linkType: hard
+
+"@volontariapp/shared@npm:0.4.0-snap-4eec624":
+  version: 0.4.0-snap-4eec624
+  resolution: "@volontariapp/shared@npm:0.4.0-snap-4eec624"
+  checksum: 10c0/67d7d6a8b2524ae0cc5e564b1a2e6b23b9ca13f6805d6ca8f112fb8a378b70ba00ee3fe3ad350d386bc3064c2ed9ef38af7fe00c19b7ae16b45a31d287aa3176
   languageName: node
   linkType: hard
 
@@ -2689,6 +2801,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"long@npm:^5.0.0":
+  version: 5.3.2
+  resolution: "long@npm:5.3.2"
+  checksum: 10c0/7130fe1cbce2dca06734b35b70d380ca3f70271c7f8852c922a7c62c86c4e35f0c39290565eca7133c625908d40e126ac57c02b1b1a4636b9457d77e1e60b981
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^10.2.0":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
@@ -3020,13 +3139,13 @@ __metadata:
   resolution: "outbox-social@workspace:."
   dependencies:
     "@types/node": "npm:^22.10.7"
-    "@volontariapp/bridge": "npm:0.2.10"
-    "@volontariapp/config": "npm:2.1.0"
-    "@volontariapp/database": "npm:1.14.0"
+    "@volontariapp/bridge": "npm:1.0.0-snap-4eec624"
+    "@volontariapp/config": "npm:3.0.0-snap-4eec624"
+    "@volontariapp/database": "npm:1.15.0-snap-4eec624"
     "@volontariapp/eslint-config": "npm:2.2.3"
-    "@volontariapp/health-check": "npm:0.1.12"
+    "@volontariapp/health-check": "npm:1.0.0-snap-4eec624"
     "@volontariapp/logger": "npm:0.2.3"
-    "@volontariapp/outbox": "npm:0.5.0"
+    "@volontariapp/outbox": "npm:0.6.1-snap-4eec624"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
     eslint: "npm:^9.18.0"
@@ -3281,6 +3400,26 @@ __metadata:
   version: 6.1.0
   resolution: "proc-log@npm:6.1.0"
   checksum: 10c0/4f178d4062733ead9d71a9b1ab24ebcecdfe2250916a5b1555f04fe2eda972a0ec76fbaa8df1ad9c02707add6749219d118a4fc46dc56bdfe4dde4b47d80bb82
+  languageName: node
+  linkType: hard
+
+"protobufjs@npm:7.5.3":
+  version: 7.5.3
+  resolution: "protobufjs@npm:7.5.3"
+  dependencies:
+    "@protobufjs/aspromise": "npm:^1.1.2"
+    "@protobufjs/base64": "npm:^1.1.2"
+    "@protobufjs/codegen": "npm:^2.0.4"
+    "@protobufjs/eventemitter": "npm:^1.1.0"
+    "@protobufjs/fetch": "npm:^1.1.0"
+    "@protobufjs/float": "npm:^1.0.2"
+    "@protobufjs/inquire": "npm:^1.1.0"
+    "@protobufjs/path": "npm:^1.1.2"
+    "@protobufjs/pool": "npm:^1.1.0"
+    "@protobufjs/utf8": "npm:^1.1.0"
+    "@types/node": "npm:>=13.7.0"
+    long: "npm:^5.0.0"
+  checksum: 10c0/9dc131a7e7a610b8291a0b0033b313f8754ef419b57c44d27874dd4edf1afc2a9a77d7a5bc2df9a744cba014de67c92756759c73200b702a11f13360e907b0dd
   languageName: node
   linkType: hard
 
@@ -4057,6 +4196,13 @@ __metadata:
   version: 6.21.0
   resolution: "undici-types@npm:6.21.0"
   checksum: 10c0/c01ed51829b10aa72fc3ce64b747f8e74ae9b60eafa19a7b46ef624403508a54c526ffab06a14a26b3120d055e1104d7abe7c9017e83ced038ea5cf52f8d5e04
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~7.19.0":
+  version: 7.19.2
+  resolution: "undici-types@npm:7.19.2"
+  checksum: 10c0/7159f10546f9f6c47d36776bb1bbf8671e87c1e587a6fee84ae1f111ae8de4f914efa8ca0dfcd224f4f4a9dfc3f6028f627ccb5ddaccf82d7fd54671b89fac3e
   languageName: node
   linkType: hard
 
