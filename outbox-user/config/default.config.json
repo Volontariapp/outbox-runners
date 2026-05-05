@@ -13,12 +13,19 @@
     "format": "text"
   },
   "outbox": {
-    "batchIntervalMs": 5000,
+    "batchIntervalMs": 2000,
     "batchSize": 10,
     "logger": {
       "level": "info",
       "format": "text"
     }
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "username": "user",
+    "password": "password",
+    "database": "redis"
   },
   "port": 4101
 }

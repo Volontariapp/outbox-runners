@@ -1,5 +1,16 @@
 {
   "db": {
     "password": "password"
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "username": "user",
+    "password": "password",
+    "database": "redis"
+  },
+  "outbox": {
+    "batchIntervalMs": 2000,
+    "batchSize": 10
   }
 }

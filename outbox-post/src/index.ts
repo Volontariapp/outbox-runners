@@ -1,9 +1,12 @@
 import 'reflect-metadata';
 import { loadConfig } from '@volontariapp/config';
 import { Logger } from '@volontariapp/logger';
+import { JobsOutboxModel, EventQueueModel } from '@volontariapp/database';
+import { JobsOutboxPusher, EventQueuePusher } from '@volontariapp/outbox';
 import { CustomConfig } from './config/custom-config.js';
 import { resolveConfigDirectory } from './config/resolve-config-directory.js';
 import { initDatabase } from './providers/database.provider.js';
+import { PostJobsOutboxRunner, PostEventQueueRunner } from './runners/index.js';
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
@@ -12,21 +15,58 @@ async function bootstrap() {
     context: 'OUTBOX-POST',
     format: config.logger.format,
   });
-  logger.info('Outbox runner for post starting (Lean Mode)...');
+
+  logger.info('Outbox runner for post starting...');
+
   const dbProvider = await initDatabase(config.db, logger);
+  const dataSource = dbProvider.getDriver();
+
+  // Initialize Pushers
+  const jobsPusher = new JobsOutboxPusher(logger, config.redis);
+  const eventsPusher = new EventQueuePusher(logger);
+
+  // Initialize Jobs Runner
+  const jobsRepository = dataSource.getRepository(JobsOutboxModel);
+  const jobsRunner = new PostJobsOutboxRunner(
+    jobsRepository,
+    config.outbox,
+    logger,
+    jobsPusher,
+  );
+
+  // Initialize Events Runner
+  const eventsRepository = dataSource.getRepository(EventQueueModel);
+  const eventsRunner = new PostEventQueueRunner(
+    eventsRepository,
+    config.outbox,
+    logger,
+    eventsPusher,
+  );
+
+  // Start both runners
+  logger.info('Starting Jobs and Events outbox runners...');
+  jobsRunner.start();
+  eventsRunner.start();
+
   const interval = setInterval(() => {
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
       process.exit(1);
     }
-    logger.info('Checking for new outbox messages...');
   }, 10000);
+
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
+    await Promise.all([
+      jobsRunner.stop(),
+      eventsRunner.stop(),
+      jobsPusher.close(),
+    ]);
     clearInterval(interval);
     await dbProvider.disconnect();
     process.exit(0);
   };
+
   process.on('SIGTERM', () => {
     void shutdown('SIGTERM');
   });
