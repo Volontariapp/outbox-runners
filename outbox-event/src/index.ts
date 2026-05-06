@@ -10,6 +10,8 @@ import {
   EventJobsOutboxRunner,
   EventEventQueueRunner,
 } from './runners/index.js';
+import { initRedis } from './providers/redis.provider.js';
+import type { RedisProvider } from '@volontariapp/bridge';
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
@@ -23,10 +25,11 @@ async function bootstrap() {
 
   const dbProvider = await initDatabase(config.db, logger);
   const dataSource = dbProvider.getDriver();
+  const redisProvider: RedisProvider = await initRedis(config.redis, logger);
 
   // Initialize Pushers
-  const jobsPusher = new JobsOutboxPusher(logger, config.redis);
-  const eventsPusher = new EventQueuePusher(logger);
+  const jobsPusher = new JobsOutboxPusher(logger, redisProvider.getDriver());
+  const eventsPusher = new EventQueuePusher(logger, redisProvider.getDriver());
 
   // Initialize Jobs Runner
   const jobsRepository = dataSource.getRepository(JobsOutboxModel);
