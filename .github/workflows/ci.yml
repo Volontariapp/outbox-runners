@@ -23,7 +23,7 @@ jobs:
       - name: Setup Environment
         uses: ./ci-tools/.github/actions/setup-node-yarn
         with:
-          node-version: '24'
+          node-version: '24.14.0'
           cache: 'yarn'
           cache-dependency-path: '${{ matrix.outbox }}/yarn.lock'
       
