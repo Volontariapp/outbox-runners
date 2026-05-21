@@ -21,7 +21,7 @@
     "@volontariapp/eslint-config": "2.2.4",
     "@volontariapp/health-check": "1.0.3",
     "@volontariapp/logger": "0.2.5",
-    "@volontariapp/outbox": "0.7.0",
+    "@volontariapp/outbox": "0.8.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.15.1",
     "pg": "^8.20.0",
