@@ -13,8 +13,8 @@
     "format": "text"
   },
   "outbox": {
-    "batchIntervalMs": 2000,
-    "batchSize": 10,
+    "batchIntervalMs": 500,
+    "batchSize": 50,
     "logger": {
       "level": "info",
       "format": "text"
