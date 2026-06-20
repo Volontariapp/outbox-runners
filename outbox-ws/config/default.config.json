@@ -1,0 +1,16 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 5432,
+    "username": "user",
+    "password": "password",
+    "database": "ms_ws",
+    "maxPoolSize": 10,
+    "ssl": false
+  },
+  "logger": {
+    "level": "info",
+    "format": "text"
+  },
+  "port": 4199
+}
