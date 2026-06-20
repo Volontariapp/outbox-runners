@@ -11,7 +11,7 @@ jobs:
   changes:
     runs-on: ubuntu-latest
     outputs:
-      workers: ${{ steps.filter.outputs.changes }}
+      outboxes: ${{ steps.filter.outputs.changes }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -36,14 +36,14 @@ jobs:
               - '.github/workflows/ci.yml'
 
   check:
-    name: Build & Lint (${{ matrix.worker }})
+    name: Build & Lint (${{ matrix.outbox }})
     runs-on: ubuntu-latest
     needs: changes
-    if: needs.changes.outputs.workers != '[]'
+    if: needs.changes.outputs.outboxes != '[]'
     strategy:
       fail-fast: false
       matrix:
-        worker: ${{ fromJSON(needs.changes.outputs.workers) }}
+        outbox: ${{ fromJSON(needs.changes.outputs.outboxes) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -57,41 +57,41 @@ jobs:
 
       - name: Get Yarn Cache Directory
         id: yarn-cache-dir-path
-        working-directory: ${{ matrix.worker }}
+        working-directory: ${{ matrix.outbox }}
         run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
 
       - name: Cache Yarn Dependencies
         uses: actions/cache@v4
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ matrix.worker }}-${{ hashFiles(format('{0}/yarn.lock', matrix.worker)) }}
+          key: ${{ runner.os }}-yarn-${{ matrix.outbox }}-${{ hashFiles(format('{0}/yarn.lock', matrix.outbox)) }}
           restore-keys: |
-            ${{ runner.os }}-yarn-${{ matrix.worker }}-
+            ${{ runner.os }}-yarn-${{ matrix.outbox }}-
       
       - name: Install dependencies
-        working-directory: ${{ matrix.worker }}
+        working-directory: ${{ matrix.outbox }}
         run: yarn install
 
       - name: Lint
-        working-directory: ${{ matrix.worker }}
+        working-directory: ${{ matrix.outbox }}
         run: yarn lint
 
       - name: Build
-        working-directory: ${{ matrix.worker }}
+        working-directory: ${{ matrix.outbox }}
         run: yarn build
 
   docker:
-    name: Build & Push Docker Image (${{ matrix.worker }})
+    name: Build & Push Docker Image (${{ matrix.outbox }})
     runs-on: ubuntu-latest
     needs: [changes, check]
-    if: github.ref == 'refs/heads/main' && needs.changes.outputs.workers != '[]'
+    if: github.ref == 'refs/heads/main' && needs.changes.outputs.outboxes != '[]'
     permissions:
       contents: read
       packages: write
     strategy:
       fail-fast: false
       matrix:
-        worker: ${{ fromJSON(needs.changes.outputs.workers) }}
+        outbox: ${{ fromJSON(needs.changes.outputs.outboxes) }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -115,7 +115,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ghcr.io/${{ github.repository_owner }}/${{ matrix.worker }}
+          images: ghcr.io/${{ github.repository_owner }}/${{ matrix.outbox }}
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=ref,event=branch
@@ -128,8 +128,8 @@ jobs:
       - name: Build and Push Image
         uses: docker/build-push-action@v7
         with:
-          context: ./${{ matrix.worker }}
-          file: ./${{ matrix.worker }}/Dockerfile
+          context: ./${{ matrix.outbox }}
+          file: ./${{ matrix.outbox }}/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -138,13 +138,13 @@ jobs:
     name: Update Deploy Submodule
     runs-on: ubuntu-latest
     needs: [changes, docker]
-    if: github.ref == 'refs/heads/main' && needs.changes.outputs.workers != '[]'
+    if: github.ref == 'refs/heads/main' && needs.changes.outputs.outboxes != '[]'
     steps:
       - name: Generate Image List
         id: images
         run: |
-          WORKERS='${{ needs.changes.outputs.workers }}'
-          IMAGES=$(echo "$WORKERS" | jq -r 'map("ghcr.io/volontariapp/" + .) | join(",")')
+          OUTBOXES='${{ needs.changes.outputs.outboxes }}'
+          IMAGES=$(echo "$OUTBOXES" | jq -r 'map("ghcr.io/volontariapp/" + .) | join(",")')
           echo "images=$IMAGES" >> $GITHUB_OUTPUT
 
       - name: Update Deploy Submodule and Images
