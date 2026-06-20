@@ -77,7 +77,7 @@ jobs:
             svc_name="${outbox#outbox-}"
             
             DEPLOYMENT_FILE="apps/base/ms-${svc_name}/deployment-outbox.yaml"
-            IMAGE_NAME="ghcr.io/${REPO_OWNER_LOWER}/${outbox}:sha-${SERVICE_SHA_SHORT}"
+            export IMAGE_NAME="ghcr.io/${REPO_OWNER_LOWER}/${outbox}:sha-${SERVICE_SHA_SHORT}"
             
             if [ -f "$DEPLOYMENT_FILE" ]; then
               echo "Updating container image in $DEPLOYMENT_FILE to $IMAGE_NAME..."
