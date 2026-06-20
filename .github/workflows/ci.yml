@@ -34,6 +34,9 @@ jobs:
             outbox-social:
               - 'outbox-social/**'
               - '.github/workflows/ci.yml'
+            outbox-ws:
+              - 'outbox-ws/**'
+              - '.github/workflows/ci.yml'
 
   check:
     name: Build & Lint (${{ matrix.outbox }})
