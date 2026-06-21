@@ -7,3 +7,4 @@ dist/
 .env.*
 !.env.example
 config/local.config.json
+**/.yarn/install-state.gz
