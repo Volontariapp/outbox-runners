@@ -19,7 +19,7 @@ La proposition de valeur de ce projet est de résoudre le **Problème de la Doub
 | Composant | Technologie | Usage / Rôle |
 | :--- | :--- | :--- |
 | **Environnement d'Exécution** | Node.js (Pur) | Exécution asynchrone hautement optimisée, sans framework lourd. |
-| **Moteur Outbox** | `@volontariapp/outbox` | Librairie centrale contenant la logique de polling, de dispatch et de retry. |
+| **Moteur Outbox** | [`@volontariapp/outbox`](https://github.com/Volontariapp/npm-packages/tree/main/packages/outbox) | Librairie centrale contenant la logique de polling, de dispatch et de retry. |
 | **Accès aux Données** | `@volontariapp/bridge` | Interface d'accès DB optimisée pour les workers. |
 | **Flux & Streams (Optionnel)** | RxJS | Manipulation de flux asynchrones complexes si nécessaire. |
 | **Scaffolding / Outillage** | Shell Script | `command.sh` pour l'orchestration des tâches (Build/Run/Create). |
