@@ -9,6 +9,7 @@ import { initDatabase } from './providers/database.provider.js';
 import { UserJobsOutboxRunner, UserEventQueueRunner } from './runners/index.js';
 import { initRedis } from './providers/redis.provider.js';
 import type { RedisProvider } from '@volontariapp/bridge';
+import { DiagnosticServer } from './diagnostic-server.js';
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
@@ -51,6 +52,9 @@ async function bootstrap() {
   jobsRunner.start();
   eventsRunner.start();
 
+  const diagnosticServer = new DiagnosticServer(dbProvider, redisProvider, config.port);
+  diagnosticServer.start();
+
   const interval = setInterval(() => {
     if (!dbProvider.isConnected()) {
       logger.error('Database connection lost! Shutting down for restart...');
@@ -60,6 +64,7 @@ async function bootstrap() {
 
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
+    diagnosticServer.close();
     await Promise.all([
       jobsRunner.stop(),
       eventsRunner.stop(),
