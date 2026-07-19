@@ -10,6 +10,9 @@ on:
 jobs:
   ci:
     uses: Volontariapp/ci-tools/.github/workflows/runner-pipeline.yml@main
+    permissions:
+      contents: read
+      packages: write
     with:
       service-name: outbox-runners
       services: '["outbox-user", "outbox-event", "outbox-post", "outbox-social", "outbox-ws"]'
