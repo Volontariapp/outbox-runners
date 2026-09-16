@@ -15,6 +15,6 @@ jobs:
       packages: write
     with:
       service-name: outbox-runners
-      services: '["outbox-user", "outbox-event", "outbox-post", "outbox-social", "outbox-ws"]'
+      services: '["outbox-user", "outbox-event", "outbox-post", "outbox-social", "outbox-ws", "outbox-storage"]'
     secrets:
       ORG_REPO_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
