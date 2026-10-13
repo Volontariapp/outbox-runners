@@ -1,0 +1,9 @@
+schema-version: v2.2
+dd-service: outbox-storage
+team: volontariapp
+application: volontariapp
+description: Runner outbox du domaine storage : lit jobs_outbox et event_queue et les pousse vers BullMQ et les Redis Streams.
+tier: backend
+type: web
+repos:
+  - url: https://github.com/Volontariapp/outbox-runners

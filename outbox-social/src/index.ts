@@ -1,3 +1,4 @@
+import './tracing.js';
 import 'reflect-metadata';
 import { loadConfig } from '@volontariapp/config';
 import { Logger } from '@volontariapp/logger';
