@@ -2922,9 +2922,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/database@npm:3.8.0, @volontariapp/database@npm:^3.8.0":
-  version: 3.8.0
-  resolution: "@volontariapp/database@npm:3.8.0"
+"@volontariapp/database@npm:3.9.0, @volontariapp/database@npm:^3.9.0":
+  version: 3.9.0
+  resolution: "@volontariapp/database@npm:3.9.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@volontariapp/bridge": "npm:1.0.7"
@@ -2939,7 +2939,7 @@ __metadata:
     reflect-metadata: "npm:^0.2.2"
   peerDependencies:
     typeorm: ^0.3.28
-  checksum: 10c0/56cbef0eabb7e7b25a4a80c760231e175284fc80e8b57675ee9e33f3c9194250ea62c2eac7e53d64605145e9e5aaea2712491c3f9ac91aef62b9af6f89ca139f
+  checksum: 10c0/7095b6b3124c2453eb51003c8a90c8c4559f4460f8a67afc6db6e2cc63d75799bea24e55e354c4ffeecb0f64f024771c134de35ac6c1b600cc9b204c02c48b24
   languageName: node
   linkType: hard
 
@@ -3015,12 +3015,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/outbox@npm:^0.10.2":
-  version: 0.10.2
-  resolution: "@volontariapp/outbox@npm:0.10.2"
+"@volontariapp/outbox@npm:^0.10.3":
+  version: 0.10.3
+  resolution: "@volontariapp/outbox@npm:0.10.3"
   dependencies:
     "@volontariapp/config": "npm:3.2.3"
-    "@volontariapp/database": "npm:3.8.0"
+    "@volontariapp/database": "npm:3.9.0"
     "@volontariapp/errors": "npm:0.6.3"
     "@volontariapp/logger": "npm:0.3.0"
     "@volontariapp/messaging": "npm:2.25.0"
@@ -3028,7 +3028,7 @@ __metadata:
     "@volontariapp/testing": "npm:1.0.3"
     bullmq: "npm:^5.76.5"
     ioredis: "npm:^5.10.1"
-  checksum: 10c0/33205fb03638fcfa85b3d11de9bc908547551320d965d411afa1c3e1856b92e5de13b3e7edc04d8e35b9f1b34328075e6fa1ab9369b201f309976d93e680cc0a
+  checksum: 10c0/74696f3237640ed679aadb31ca5fd86533884be151180f8d8f6fe62a80fd98859b1a9c5b45ecdd3a6b0b2b3d27a5d0f1b9c6075b4f1e47c72355cf05ac051113
   languageName: node
   linkType: hard
 
@@ -5921,12 +5921,12 @@ __metadata:
     "@types/node": "npm:^22.10.7"
     "@volontariapp/bridge": "npm:^1.0.7"
     "@volontariapp/config": "npm:^3.2.3"
-    "@volontariapp/database": "npm:^3.8.0"
+    "@volontariapp/database": "npm:^3.9.0"
     "@volontariapp/eslint-config": "npm:^2.2.5"
     "@volontariapp/health-check": "npm:^1.0.7"
     "@volontariapp/logger": "npm:^0.3.0"
     "@volontariapp/monitoring": "npm:^2.2.0"
-    "@volontariapp/outbox": "npm:^0.10.2"
+    "@volontariapp/outbox": "npm:^0.10.3"
     "@volontariapp/testing": "npm:^1.0.3"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
