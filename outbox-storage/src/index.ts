@@ -7,13 +7,17 @@ import { JobsOutboxPusher, EventQueuePusher } from '@volontariapp/outbox';
 import { CustomConfig } from './config/custom-config.js';
 import { resolveConfigDirectory } from './config/resolve-config-directory.js';
 import { initDatabase } from './providers/database.provider.js';
-import { StorageJobsOutboxRunner, StorageEventQueueRunner } from './runners/index.js';
+import {
+  StorageJobsOutboxRunner,
+  StorageEventQueueRunner,
+} from './runners/index.js';
 import { initRedis } from './providers/redis.provider.js';
 import type { RedisProvider } from '@volontariapp/bridge';
 
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
+  Logger.setDefaultConfig({ format: config.logger.format });
   const logger = new Logger({
     context: 'OUTBOX-STORAGE',
     format: config.logger.format,
