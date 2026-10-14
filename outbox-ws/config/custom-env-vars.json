@@ -16,6 +16,7 @@
   },
   "outbox": {
     "batchIntervalMs": "OUTBOX_BATCH_INTERVAL_MS",
-    "batchSize": "OUTBOX_BATCH_SIZE"
+    "batchSize": "OUTBOX_BATCH_SIZE",
+    "maxIdleIntervalMs": "OUTBOX_MAX_IDLE_INTERVAL_MS"
   }
 }

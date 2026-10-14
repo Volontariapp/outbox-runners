@@ -18,7 +18,8 @@
     "logger": {
       "level": "info",
       "format": "text"
-    }
+    },
+    "maxIdleIntervalMs": 5000
   },
   "redis": {
     "host": "localhost",
