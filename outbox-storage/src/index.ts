@@ -17,7 +17,10 @@ import type { RedisProvider } from '@volontariapp/bridge';
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  Logger.setDefaultConfig({ format: config.logger.format });
+  Logger.setDefaultConfig({
+    format: config.logger.format,
+    context: 'OUTBOX-STORAGE',
+  });
   const logger = new Logger({
     context: 'OUTBOX-STORAGE',
     format: config.logger.format,
