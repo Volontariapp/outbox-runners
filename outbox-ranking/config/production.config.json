@@ -1,0 +1,12 @@
+{
+  "logger": {
+    "level": "info",
+    "format": "json"
+  },
+  "outbox": {
+    "logger": {
+      "level": "info",
+      "format": "json"
+    }
+  }
+}
