@@ -2343,14 +2343,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@protobufjs/eventemitter@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@protobufjs/eventemitter@npm:1.1.0"
-  checksum: 10c0/1eb0a75180e5206d1033e4138212a8c7089a3d418c6dfa5a6ce42e593a4ae2e5892c4ef7421f38092badba4040ea6a45f0928869989411001d8c1018ea9a6e70
-  languageName: node
-  linkType: hard
-
-"@protobufjs/eventemitter@npm:^1.1.1":
+"@protobufjs/eventemitter@npm:^1.1.0, @protobufjs/eventemitter@npm:^1.1.1":
   version: 1.1.1
   resolution: "@protobufjs/eventemitter@npm:1.1.1"
   checksum: 10c0/8e06193d4629c5e7c09d4f8c2ddba8fc4dfa739f0149f33a1d901568d35bb7b8b5277a4e8452baf3bdd0b302fd599cf255d193267aa93a0a4747e23cd073c4ac
@@ -2373,7 +2366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@protobufjs/inquire@npm:^1.1.0, @protobufjs/inquire@npm:^1.1.2":
+"@protobufjs/inquire@npm:^1.1.0":
   version: 1.1.2
   resolution: "@protobufjs/inquire@npm:1.1.2"
   checksum: 10c0/af69597818a14cac6a00a74cd5b3fb85aa96658b9dbbae73e6d907cb154ebf470953a8c537b3e6095a43de565ec4e6c5b40227c72f4a7d762d34fbec7ac179e7
@@ -2394,17 +2387,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@protobufjs/utf8@npm:^1.1.0":
+"@protobufjs/utf8@npm:^1.1.0, @protobufjs/utf8@npm:^1.1.1":
   version: 1.1.2
   resolution: "@protobufjs/utf8@npm:1.1.2"
   checksum: 10c0/975c6e2c0319bd50c17531d186b537a88cb4d3205e3ca9297cd842b631d341da0ee3ff16be8656cd2660756dc753b29c8a6a14c0ad8ed602c1f91ddf22e7b3f3
-  languageName: node
-  linkType: hard
-
-"@protobufjs/utf8@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@protobufjs/utf8@npm:1.1.1"
-  checksum: 10c0/641fc145f00626405e8984b6e90b9edcbcc072ffc82d0647ca3176e09c730b2d022f988e65f011a7a17e2e4d77cde7733643aa10d8ac2bfa30f134dbcad553fd
   languageName: node
   linkType: hard
 
@@ -2543,21 +2529,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:>=13.7.0":
   version: 25.6.2
   resolution: "@types/node@npm:25.6.2"
   dependencies:
     undici-types: "npm:~7.19.0"
   checksum: 10c0/7f540331aa3ab88c285aeaf2eb43e3992f54f0cdb7f3593d156af67b199d4eaf56590fa1c310a00aa58ff69dba668cb3915a157fe83cd6b40a73bb338a12f09a
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:>=13.7.0":
-  version: 25.6.0
-  resolution: "@types/node@npm:25.6.0"
-  dependencies:
-    undici-types: "npm:~7.19.0"
-  checksum: 10c0/d2d2015630ff098a201407f55f5077a20270ae4f465c739b40865cd9933b91b9c5d2b85568eadaf3db0801b91e267333ca7eb39f007428b173d1cdab4b339ac5
   languageName: node
   linkType: hard
 
@@ -6023,24 +6000,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-cloudflare@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "pg-cloudflare@npm:1.3.0"
-  checksum: 10c0/b0866c88af8e54c7b3ed510719d92df37714b3af5e3a3a10d9f761fcec99483e222f5b78a1f2de590368127648087c45c01aaf66fadbe46edb25673eedc4f8fc
-  languageName: node
-  linkType: hard
-
 "pg-cloudflare@npm:^1.4.1":
   version: 1.4.1
   resolution: "pg-cloudflare@npm:1.4.1"
   checksum: 10c0/32e62c987073472e81c0dc218f850b1212b4e2c1f35d50433d87d054fe268f549ebaf8fc6c1227ab24c12b318f3e3a2a191ffbdfb2daa30b39aa6802ab8fe2f6
-  languageName: node
-  linkType: hard
-
-"pg-connection-string@npm:^2.12.0":
-  version: 2.12.0
-  resolution: "pg-connection-string@npm:2.12.0"
-  checksum: 10c0/3a26c62884a9f0464718f652bd5d6bce276ebda830c0fef4de4f88ae73c2507d70cae1d45c2f5b49bebd76187fb4c94f889d07c53fca6acd06b2eecbebcdc336
   languageName: node
   linkType: hard
 
@@ -6055,15 +6018,6 @@ __metadata:
   version: 1.0.1
   resolution: "pg-int8@npm:1.0.1"
   checksum: 10c0/be6a02d851fc2a4ae3e9de81710d861de3ba35ac927268973eb3cb618873a05b9424656df464dd43bd7dc3fc5295c3f5b3c8349494f87c7af50ec59ef14e0b98
-  languageName: node
-  linkType: hard
-
-"pg-pool@npm:^3.13.0":
-  version: 3.13.0
-  resolution: "pg-pool@npm:3.13.0"
-  peerDependencies:
-    pg: ">=8.0"
-  checksum: 10c0/2756f79cda14e3834356f2ca035deab806bca2172a38a488b62ada54bd3e65d33f583661bbe96da0c0e75e6bc59807ada733c37efca6e24ae2893429936a1549
   languageName: node
   linkType: hard
 
@@ -6083,13 +6037,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-protocol@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "pg-protocol@npm:1.13.0"
-  checksum: 10c0/a4e851e6bb8ff404ca19d561cf49b6b0caf45163bd3f289889edaf6c4e9fb25b08fb57f50d37a8cc86007efcf2cbb3dd2372c97a353a546f45eb49ddebc84fa9
-  languageName: node
-  linkType: hard
-
 "pg-types@npm:2.2.0, pg-types@npm:^2.2.0":
   version: 2.2.0
   resolution: "pg-types@npm:2.2.0"
@@ -6103,29 +6050,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg@npm:^8.20.0":
-  version: 8.20.0
-  resolution: "pg@npm:8.20.0"
-  dependencies:
-    pg-cloudflare: "npm:^1.3.0"
-    pg-connection-string: "npm:^2.12.0"
-    pg-pool: "npm:^3.13.0"
-    pg-protocol: "npm:^1.13.0"
-    pg-types: "npm:2.2.0"
-    pgpass: "npm:1.0.5"
-  peerDependencies:
-    pg-native: ">=3.0.1"
-  dependenciesMeta:
-    pg-cloudflare:
-      optional: true
-  peerDependenciesMeta:
-    pg-native:
-      optional: true
-  checksum: 10c0/e21d44b9fb3ec188e67778d7abd32d945a546f2da5128b6c8c16da8ae1e42fdc953c0d6f0a2ee65d11f31808c1dffaf908cb9c880cd2e8f0ae05525e4b8bc832
-  languageName: node
-  linkType: hard
-
-"pg@npm:^8.23.1":
+"pg@npm:^8.20.0, pg@npm:^8.23.1":
   version: 8.23.1
   resolution: "pg@npm:8.23.1"
   dependencies:
@@ -6305,7 +6230,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:^7.5.5":
+"protobufjs@npm:^7.5.5, protobufjs@npm:^7.5.8":
   version: 7.6.6
   resolution: "protobufjs@npm:7.6.6"
   dependencies:
@@ -6321,26 +6246,6 @@ __metadata:
     "@types/node": "npm:>=13.7.0"
     long: "npm:^5.3.2"
   checksum: 10c0/6c0dc6d4a2801825e39417bc116297d5261c0cf28892a5e28adafc13432331c0cb75603bbe50ad6f2715f3b0a9ce2896591ad6b51fdc8eae2d05b9ac2e4a8ec1
-  languageName: node
-  linkType: hard
-
-"protobufjs@npm:^7.5.8":
-  version: 7.6.0
-  resolution: "protobufjs@npm:7.6.0"
-  dependencies:
-    "@protobufjs/aspromise": "npm:^1.1.2"
-    "@protobufjs/base64": "npm:^1.1.2"
-    "@protobufjs/codegen": "npm:^2.0.5"
-    "@protobufjs/eventemitter": "npm:^1.1.0"
-    "@protobufjs/fetch": "npm:^1.1.1"
-    "@protobufjs/float": "npm:^1.0.2"
-    "@protobufjs/inquire": "npm:^1.1.2"
-    "@protobufjs/path": "npm:^1.1.2"
-    "@protobufjs/pool": "npm:^1.1.0"
-    "@protobufjs/utf8": "npm:^1.1.1"
-    "@types/node": "npm:>=13.7.0"
-    long: "npm:^5.3.2"
-  checksum: 10c0/013339777bc29610ef141876d734aa538a7982d278930a121513171f32958b3b38411b259476d9118c56d55f67980a8f433476cfbfdd1d1c60b4a06f36d3f689
   languageName: node
   linkType: hard
 
