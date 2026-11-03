@@ -12,6 +12,10 @@ import {
   RankingEventQueueRunner,
 } from './runners/index.js';
 import { initRedis } from './providers/redis.provider.js';
+import {
+  startHealthServer,
+  closeHealthServer,
+} from './providers/health.provider.js';
 import type { RedisProvider } from '@volontariapp/bridge';
 
 async function bootstrap() {
@@ -31,6 +35,12 @@ async function bootstrap() {
   const dbProvider = await initDatabase(config.db, logger);
   const dataSource = dbProvider.getDriver();
   const redisProvider: RedisProvider = await initRedis(config.redis, logger);
+  const healthServer = startHealthServer(
+    config.port,
+    dbProvider,
+    redisProvider,
+    logger,
+  );
 
   // Initialize Pushers
   const jobsPusher = new JobsOutboxPusher(logger, redisProvider.getDriver());
@@ -69,6 +79,7 @@ async function bootstrap() {
   const shutdown = async (signal: string) => {
     logger.info(`${signal} received, shutting down...`);
     await Promise.all([
+      closeHealthServer(healthServer),
       jobsRunner.stop(),
       eventsRunner.stop(),
       jobsPusher.close(),
