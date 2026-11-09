@@ -1,6 +1,6 @@
 import './tracing.js';
 import 'reflect-metadata';
-import { loadConfig } from '@volontariapp/config';
+import { configureLogger, loadConfig } from '@volontariapp/config';
 import { Logger } from '@volontariapp/logger';
 import { JobsOutboxModel, EventQueueModel } from '@volontariapp/database';
 import { JobsOutboxPusher, EventQueuePusher } from '@volontariapp/outbox';
@@ -18,10 +18,7 @@ import type { RedisProvider } from '@volontariapp/bridge';
 async function bootstrap() {
   const configDir = resolveConfigDirectory();
   const config = loadConfig(configDir, CustomConfig);
-  Logger.setDefaultConfig({
-    format: config.logger.format,
-    context: 'OUTBOX-USER',
-  });
+  configureLogger(config.logger, { context: 'OUTBOX-USER' });
   const logger = new Logger({
     context: 'OUTBOX-USER',
     format: config.logger.format,
