@@ -8,6 +8,7 @@
   },
   "outbox": {
     "batchIntervalMs": "OUTBOX_BATCH_INTERVAL_MS",
+    "maxIdleIntervalMs": "OUTBOX_MAX_IDLE_INTERVAL_MS",
     "batchSize": "OUTBOX_BATCH_SIZE"
   },
   "redis": {
