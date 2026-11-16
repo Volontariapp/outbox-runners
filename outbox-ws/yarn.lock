@@ -2651,23 +2651,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:8.72.0"
+"@typescript-eslint/eslint-plugin@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/eslint-plugin@npm:8.72.2"
   dependencies:
     "@eslint-community/regexpp": "npm:^4.12.2"
-    "@typescript-eslint/scope-manager": "npm:8.72.0"
-    "@typescript-eslint/type-utils": "npm:8.72.0"
-    "@typescript-eslint/utils": "npm:8.72.0"
-    "@typescript-eslint/visitor-keys": "npm:8.72.0"
+    "@typescript-eslint/scope-manager": "npm:8.72.2"
+    "@typescript-eslint/type-utils": "npm:8.72.2"
+    "@typescript-eslint/utils": "npm:8.72.2"
+    "@typescript-eslint/visitor-keys": "npm:8.72.2"
     ignore: "npm:^7.0.5"
     natural-compare: "npm:^1.4.0"
     ts-api-utils: "npm:^2.5.0"
   peerDependencies:
-    "@typescript-eslint/parser": ^8.72.0
+    "@typescript-eslint/parser": ^8.72.2
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/19e7a2fff7fa15a41662eab550918f8e060e522de5621cb78b1cf0516f9dd845878f03f351d503161a3d0417bc87e73b582d2c41d13a51bb3e7d3088cce41fe2
+  checksum: 10c0/2464497406205ae4e48f4d6270583992f6a4d6990562f9a8a841ee01c2b0f6821409447f5ceef36a896d6fbcf92426debced014551d72263651d4752436d43d6
   languageName: node
   linkType: hard
 
@@ -2687,32 +2687,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/parser@npm:8.72.0"
+"@typescript-eslint/parser@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/parser@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/scope-manager": "npm:8.72.0"
-    "@typescript-eslint/types": "npm:8.72.0"
-    "@typescript-eslint/typescript-estree": "npm:8.72.0"
-    "@typescript-eslint/visitor-keys": "npm:8.72.0"
+    "@typescript-eslint/scope-manager": "npm:8.72.2"
+    "@typescript-eslint/types": "npm:8.72.2"
+    "@typescript-eslint/typescript-estree": "npm:8.72.2"
+    "@typescript-eslint/visitor-keys": "npm:8.72.2"
     debug: "npm:^4.4.3"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/da37b31758b3a90eaca4cdf650f71a565fe0b0c1f4348281623b790d53858fd1afda185f5da9530858d0eada39ba1aabc4bdc10c2c449c001c4186471cd1f761
+  checksum: 10c0/17e14881171104d5a1729e08668252df1c9d7006a56616a04338c4f5091a7d62539e65ed431908449567b65cea327ee11abebb84d0471c3b5bbdb92c3a2a619f
   languageName: node
   linkType: hard
 
-"@typescript-eslint/project-service@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/project-service@npm:8.72.0"
+"@typescript-eslint/project-service@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/project-service@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/tsconfig-utils": "npm:^8.72.0"
-    "@typescript-eslint/types": "npm:^8.72.0"
+    "@typescript-eslint/tsconfig-utils": "npm:^8.72.2"
+    "@typescript-eslint/types": "npm:^8.72.2"
     debug: "npm:^4.4.3"
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/33825ee41b6f0281f40fca6c9123af5493225a971f62173381984de52d4101cc974fdb93077e16ac4b67b3c345bea738c1bc228b76610bd1737f6b2af2c0ccaf
+  checksum: 10c0/655d448448b05e0394da913d36c6e527b88aaf5ee98dddfa06e7f674f9a55d729df2114f04ecdfb3657cd5ac1ce1dfed2da1c964e5cb766e6a2ea91c76b3f136
   languageName: node
   linkType: hard
 
@@ -2726,22 +2726,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/scope-manager@npm:8.72.0"
+"@typescript-eslint/scope-manager@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/scope-manager@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/types": "npm:8.72.0"
-    "@typescript-eslint/visitor-keys": "npm:8.72.0"
-  checksum: 10c0/f8e40de6c306aa5792ede4389aa279cca8ea43d0ea31fec083102bd563ac22d14a6b0554b641e27f476421e033adc299c6b4d4d026bb1fd84f7694421fb5a74f
+    "@typescript-eslint/types": "npm:8.72.2"
+    "@typescript-eslint/visitor-keys": "npm:8.72.2"
+  checksum: 10c0/c8a0836f9f60b3bebec02f2ce75b7211479d02865e27ca628909d047b27a0dae33c928ea5e6622e58e33227e11bf7da58bf81e534c10cbf8bfd57bae4919da32
   languageName: node
   linkType: hard
 
-"@typescript-eslint/tsconfig-utils@npm:8.72.0, @typescript-eslint/tsconfig-utils@npm:^8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/tsconfig-utils@npm:8.72.0"
+"@typescript-eslint/tsconfig-utils@npm:8.72.2, @typescript-eslint/tsconfig-utils@npm:^8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/tsconfig-utils@npm:8.72.2"
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/98a23511042dcf4af517897712a44e69a50304f2ea9a1e004ed95f53185e17f669d2d4333384b6b611177a2ecaba65b1ad0f821ecc7d4fdccc6868aa87491f36
+  checksum: 10c0/eafdd9b29185849218277c7c79a23fdcedea1d9d016b2f438e3518eba89e2fff09cb4434afd9ab5f3eec322f554456844cb5b6be5deeaaf77a915733c966b392
   languageName: node
   linkType: hard
 
@@ -2760,19 +2760,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/type-utils@npm:8.72.0"
+"@typescript-eslint/type-utils@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/type-utils@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/types": "npm:8.72.0"
-    "@typescript-eslint/typescript-estree": "npm:8.72.0"
-    "@typescript-eslint/utils": "npm:8.72.0"
+    "@typescript-eslint/types": "npm:8.72.2"
+    "@typescript-eslint/typescript-estree": "npm:8.72.2"
+    "@typescript-eslint/utils": "npm:8.72.2"
     debug: "npm:^4.4.3"
     ts-api-utils: "npm:^2.5.0"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/b1ab5fff0840d8326920fffaf1e3323098e8a53f538a9e4349c8b3234f7b986b7628fc49c945edd3fbe2c3b242920a2963c0f8688bc614f818df4f549c881dc0
+  checksum: 10c0/db237b79d866555c84cbaa555d9a23c3e01d5167a259f33a31c6c0e2905fb0111a637386ee9128291935f142cbeb0716ca280cd789c998b37a69aa53b15764ad
   languageName: node
   linkType: hard
 
@@ -2783,10 +2783,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:8.72.0, @typescript-eslint/types@npm:^8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/types@npm:8.72.0"
-  checksum: 10c0/11ee41f1860149f3dcfe6f517840cd7254fbc90f4acaf6098f731bb00a6392f8e5d7d9d0e47e516bd0e5fcd3110e41624ad893036ad79fa6dd6b5a67d6a42aa6
+"@typescript-eslint/types@npm:8.72.2, @typescript-eslint/types@npm:^8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/types@npm:8.72.2"
+  checksum: 10c0/283cbfd02033da3790dde8a613f23bbcb21706281393daf256ea798112124e355679d1f5bdd16ee0d3b9730f4d16acd619504b3bfb25c7979f363c0963b3e1b6
   languageName: node
   linkType: hard
 
@@ -2808,14 +2808,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/typescript-estree@npm:8.72.0"
+"@typescript-eslint/typescript-estree@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/typescript-estree@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/project-service": "npm:8.72.0"
-    "@typescript-eslint/tsconfig-utils": "npm:8.72.0"
-    "@typescript-eslint/types": "npm:8.72.0"
-    "@typescript-eslint/visitor-keys": "npm:8.72.0"
+    "@typescript-eslint/project-service": "npm:8.72.2"
+    "@typescript-eslint/tsconfig-utils": "npm:8.72.2"
+    "@typescript-eslint/types": "npm:8.72.2"
+    "@typescript-eslint/visitor-keys": "npm:8.72.2"
     debug: "npm:^4.4.3"
     minimatch: "npm:^10.2.2"
     semver: "npm:^7.7.3"
@@ -2823,7 +2823,7 @@ __metadata:
     ts-api-utils: "npm:^2.5.0"
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/594eb6dc625b5265833701fca67984d94863d1552202e48f8180d78af69da61a4aa8e8126ac83196d4d8f18c4f74390287c0eb81219b0f5694f308c5d11352fe
+  checksum: 10c0/5bcb59ec83bd7e750864308b2a6e2d7844777368f92180f4c4c3a9e92f8102c3fc8a6f9db4bee234e5417ce722a3f4835d6e74e6925b71654f4e8e7642f2fba5
   languageName: node
   linkType: hard
 
@@ -2842,18 +2842,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/utils@npm:8.72.0"
+"@typescript-eslint/utils@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/utils@npm:8.72.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.9.1"
-    "@typescript-eslint/scope-manager": "npm:8.72.0"
-    "@typescript-eslint/types": "npm:8.72.0"
-    "@typescript-eslint/typescript-estree": "npm:8.72.0"
+    "@typescript-eslint/scope-manager": "npm:8.72.2"
+    "@typescript-eslint/types": "npm:8.72.2"
+    "@typescript-eslint/typescript-estree": "npm:8.72.2"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/5d6404bdf52fe4e55af411ad92e3cfb9d183b7379af9e8e30d4f818dabdac4043023e717043d6985d8f3090b11a6d47f7f47df52feb890dc7f5eda3ec5e83037
+  checksum: 10c0/beadf16888dd042ede231e4b062cc058d0b3a58d08ffa99bd111b98d0e9f076da4d62cb3ca5102706a72c381e24fe517903804d38db4c4b46e9d024387f6b8cf
   languageName: node
   linkType: hard
 
@@ -2867,13 +2867,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:8.72.0":
-  version: 8.72.0
-  resolution: "@typescript-eslint/visitor-keys@npm:8.72.0"
+"@typescript-eslint/visitor-keys@npm:8.72.2":
+  version: 8.72.2
+  resolution: "@typescript-eslint/visitor-keys@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/types": "npm:8.72.0"
+    "@typescript-eslint/types": "npm:8.72.2"
     eslint-visitor-keys: "npm:^5.0.0"
-  checksum: 10c0/9df92b2ece08c5c7f2568b88d1c6c1fcb4233c9dc67f42b0d1eb60564cd0f1970e00ad6a917ce28da21476ca930a92f45414d4e27f59bb8a502abef5c436be48
+  checksum: 10c0/134e441f0c1d055b6b82f59887bc96d07a89909f8e910622e1e95d7fbf42de9c4fa1910d8335af252910c298b474565d2c34888608130d53238eee1504df9894
   languageName: node
   linkType: hard
 
@@ -2884,58 +2884,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/bridge@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@volontariapp/bridge@npm:1.0.14"
+"@volontariapp/bridge@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@volontariapp/bridge@npm:1.0.15"
   dependencies:
     "@types/geojson": "npm:^7946.0.16"
-    "@volontariapp/config": "npm:3.6.0"
-    "@volontariapp/errors": "npm:0.7.1"
-    "@volontariapp/logger": "npm:0.5.0"
+    "@volontariapp/config": "npm:3.6.1"
+    "@volontariapp/errors": "npm:0.7.2"
+    "@volontariapp/logger": "npm:0.6.0"
     ioredis: "npm:^5.11.1"
     neo4j-driver: "npm:^6.3.0"
     pg: "npm:^8.23.1"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.31"
-  checksum: 10c0/0ed5d57e795afe6e43b1134431e12d6b3c1dc7221c6e346c38891a7a3b3c530f6a5b81dfbbd8b8885598ed98d9402946c2880ff13e4a0ec166011ee469254312
+  checksum: 10c0/167983822852b686c9e4db5d4941f2b18427278c30549156b3d0ca8d3820765bdbe53f0b1ec47bc34f3b8418312887d9d97173922ef5a5e809b340dbba7a86ae
   languageName: node
   linkType: hard
 
-"@volontariapp/config@npm:3.6.0":
-  version: 3.6.0
-  resolution: "@volontariapp/config@npm:3.6.0"
+"@volontariapp/config@npm:3.6.1":
+  version: 3.6.1
+  resolution: "@volontariapp/config@npm:3.6.1"
   dependencies:
-    "@volontariapp/logger": "npm:0.5.0"
+    "@volontariapp/logger": "npm:0.6.0"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
     ioredis: "npm:^5.11.1"
     neo4j-driver: "npm:^6.3.0"
     reflect-metadata: "npm:^0.2.2"
     typeorm: "npm:^0.3.31"
-  checksum: 10c0/045c5faace55812fef56b589f53155c3b1126b153a565b77944cec6abde90de489d9f89a9cef23cdcdf8d275605e8977d02e0634b261593f075319919d57218e
+  checksum: 10c0/03919e172333111fc02157a962740f1668884870c771b6eeb0eebcc997c13986bf41ddb697980c986e79d055b087d11df7da30db8a3d1b164b89dc8a37431366
   languageName: node
   linkType: hard
 
-"@volontariapp/contracts@npm:4.13.2":
-  version: 4.13.2
-  resolution: "@volontariapp/contracts@npm:4.13.2"
+"@volontariapp/contracts@npm:4.13.3":
+  version: 4.13.3
+  resolution: "@volontariapp/contracts@npm:4.13.3"
   dependencies:
-    "@volontariapp/logger": "npm:0.5.0"
+    "@volontariapp/logger": "npm:0.6.0"
     protobufjs: "npm:^7.5.8"
-  checksum: 10c0/a3113a19364a684fa4e8b5842ce9d326c186d488255b6cc8f0b7f9c832ee69d09e51e2dd03f07b4079d47ba2ae45ed713f8f8ac3078dacdf1f4df0bf96b2bc0f
+  checksum: 10c0/d32e0b351f7237220c4187a65a20b463a67b38016308cf4ada51631c4c9a7af03f2b071f44328fbabe9432c67fa2489d0db3a9912ede325da96d8579fa84c035
   languageName: node
   linkType: hard
 
-"@volontariapp/database@npm:3.15.0":
-  version: 3.15.0
-  resolution: "@volontariapp/database@npm:3.15.0"
+"@volontariapp/database@npm:3.15.1":
+  version: 3.15.1
+  resolution: "@volontariapp/database@npm:3.15.1"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
-    "@volontariapp/bridge": "npm:1.0.14"
-    "@volontariapp/config": "npm:3.6.0"
-    "@volontariapp/errors": "npm:0.7.1"
-    "@volontariapp/logger": "npm:0.5.0"
-    "@volontariapp/messaging": "npm:2.35.0"
+    "@volontariapp/bridge": "npm:1.0.15"
+    "@volontariapp/config": "npm:3.6.1"
+    "@volontariapp/errors": "npm:0.7.2"
+    "@volontariapp/logger": "npm:0.6.0"
+    "@volontariapp/messaging": "npm:2.35.1"
     "@volontariapp/shared": "npm:0.20.0"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
@@ -2945,16 +2945,16 @@ __metadata:
     typeorm: ^0.3.28
   bin:
     volontariapp-outbox-requeue: ./dist/cli/requeue.js
-  checksum: 10c0/a7c0fdd5c449dd9fe5c095e31ae35ef11f760239d7b349f9f918d7c105ec643ed8c132a16e82c4fed6e00db00cd71f02d694a9179bc8593cce289c417f497108
+  checksum: 10c0/7b6a582548b18131c033492b989068702ca984947bbda4ddc86b015bf8f5e9f7952f3b94ed8bf5228653eec7b6cb5efb45e6199a017498b8bed96ef1411b8f2b
   languageName: node
   linkType: hard
 
-"@volontariapp/errors@npm:0.7.1":
-  version: 0.7.1
-  resolution: "@volontariapp/errors@npm:0.7.1"
+"@volontariapp/errors@npm:0.7.2":
+  version: 0.7.2
+  resolution: "@volontariapp/errors@npm:0.7.2"
   dependencies:
-    "@volontariapp/logger": "npm:0.5.0"
-  checksum: 10c0/0b752c8eb07729750e26c01a97f96363558a13f1d37bd730c9a00e4557d4b8cfe344466b05de3db2f46a5f29b896964c1ec8edde0c113aac37708305b53b3321
+    "@volontariapp/logger": "npm:0.6.0"
+  checksum: 10c0/de82e3fbf3ae22a66dc77a5f96ee849d0858f2de20278acce7108e96ddc0f04afd9ad782782869b51f3d61b5010a0765a5997fcdf6811ba151889bea8b26db31
   languageName: node
   linkType: hard
 
@@ -2972,39 +2972,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volontariapp/health-check@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@volontariapp/health-check@npm:1.0.14"
+"@volontariapp/health-check@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@volontariapp/health-check@npm:1.0.15"
   dependencies:
-    "@volontariapp/bridge": "npm:1.0.14"
-    "@volontariapp/config": "npm:3.6.0"
-    "@volontariapp/errors": "npm:0.7.1"
-  checksum: 10c0/043756991fa67a1739c1d7b10ee2959e1bda9945b20061d130ec405ccaed402d5ded09beefba74faa115c8165bca22cf82d239d686ba4b26844ba6ef9c513ac1
+    "@volontariapp/bridge": "npm:1.0.15"
+    "@volontariapp/config": "npm:3.6.1"
+    "@volontariapp/errors": "npm:0.7.2"
+  checksum: 10c0/fbc7d1bfc79b103c7858229df352471d094b4c81224afaea2f31fb96ca0e208f270420a3c99bc7aa7669e52d47ec71eb0a0d0a17d802647b5bb980665f598732
   languageName: node
   linkType: hard
 
-"@volontariapp/logger@npm:0.5.0, @volontariapp/logger@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@volontariapp/logger@npm:0.5.0"
+"@volontariapp/logger@npm:0.6.0, @volontariapp/logger@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@volontariapp/logger@npm:0.6.0"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
-  checksum: 10c0/88832245d0f5160cc7e956b9e15b88a411a114a9764c3cc0d4f82545ff3490678b8d9e7ebd8b90d5de5e4d777bd760e3050d332b1a1e5371b5fa7a21c88f61f3
+  checksum: 10c0/d7287060c7817e5ee69d40f33d1c1603a7cc50ca6ea4b3d20acac78e967a356a9428eb52217d6e78ffe05cfc31818bc11169b068d9a17a34941ce3e0c23b10f6
   languageName: node
   linkType: hard
 
-"@volontariapp/messaging@npm:2.35.0":
-  version: 2.35.0
-  resolution: "@volontariapp/messaging@npm:2.35.0"
+"@volontariapp/messaging@npm:2.35.1":
+  version: 2.35.1
+  resolution: "@volontariapp/messaging@npm:2.35.1"
   dependencies:
-    "@volontariapp/contracts": "npm:4.13.2"
+    "@volontariapp/contracts": "npm:4.13.3"
     "@volontariapp/shared": "npm:0.20.0"
-  checksum: 10c0/e74577162a4ac8f817cbcbb08037add7fbf1c3a5ae6e805b7a8ab4633da8ce8d61e848d0cd7777472e48b418d8ac7e38ee3e25d4dc27a205d5437fb542dd4ff3
+  checksum: 10c0/1225bced637f99283a919c6af2e242bd69472ecda482691eb89db27e3335b695b30216b588d9a3dc0bb67fbe6d9bf26f0ff35bc6a017dc4f86fb86a6b82c1be7
   languageName: node
   linkType: hard
 
-"@volontariapp/monitoring@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "@volontariapp/monitoring@npm:2.5.1"
+"@volontariapp/monitoring@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "@volontariapp/monitoring@npm:2.5.2"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/auto-instrumentations-node": "npm:^0.75.0"
@@ -3016,25 +3016,25 @@ __metadata:
     "@opentelemetry/sdk-node": "npm:^0.217.0"
     "@opentelemetry/sdk-trace-base": "npm:^2.7.1"
     "@opentelemetry/semantic-conventions": "npm:^1.44.0"
-    "@volontariapp/logger": "npm:0.5.0"
-  checksum: 10c0/5aada16c1ead22251afadc81b74d14241fbfcf3fbb608c41aa54f3b751efdef99b2220d508c00e44f8e084c4dd283a165048e41f97a2436f395bb02ffa46cd89
+    "@volontariapp/logger": "npm:0.6.0"
+  checksum: 10c0/482bbbdadc64feb2248d4fd589d3b91901c05371cae27b505bdb1819539a02c910fdcf2e2a58d5c2a5f9f169c6a37bfb5cfc0a59c57533df4e2b8da8325c05d7
   languageName: node
   linkType: hard
 
-"@volontariapp/outbox@npm:0.11.1":
-  version: 0.11.1
-  resolution: "@volontariapp/outbox@npm:0.11.1"
+"@volontariapp/outbox@npm:0.11.2":
+  version: 0.11.2
+  resolution: "@volontariapp/outbox@npm:0.11.2"
   dependencies:
-    "@volontariapp/config": "npm:3.6.0"
-    "@volontariapp/database": "npm:3.15.0"
-    "@volontariapp/errors": "npm:0.7.1"
-    "@volontariapp/logger": "npm:0.5.0"
-    "@volontariapp/messaging": "npm:2.35.0"
+    "@volontariapp/config": "npm:3.6.1"
+    "@volontariapp/database": "npm:3.15.1"
+    "@volontariapp/errors": "npm:0.7.2"
+    "@volontariapp/logger": "npm:0.6.0"
+    "@volontariapp/messaging": "npm:2.35.1"
     "@volontariapp/shared": "npm:0.20.0"
     "@volontariapp/testing": "npm:1.0.3"
     bullmq: "npm:^5.76.11"
     ioredis: "npm:^5.11.1"
-  checksum: 10c0/3b5ef6b8608772331e81750b594a3ffd4cc112ddd9a6c965534211b0a0706f5e63c238ed73960827df598e0cebc8ae9da6fe35f535b370d7fd9d3b790138915f
+  checksum: 10c0/5f5af1e3f01237b034a54f85f2ebce625620605ce59a973e75cf5c16dc2efd193aa2ac9b366a58df4484e15396079bba274cbf1b45b42e4c8bb538b62f079256
   languageName: node
   linkType: hard
 
@@ -4666,10 +4666,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^17.13.0":
-  version: 17.13.0
-  resolution: "globals@npm:17.13.0"
-  checksum: 10c0/8371d9e4e5581640141b5cce70a098edd765d2e3ab063b14998e590698071e0afb4a4a6739ccfbdcbdeb2565c5553697ba07d95703c51039912cf341a7dba7a7
+"globals@npm:^17.14.0":
+  version: 17.14.0
+  resolution: "globals@npm:17.14.0"
+  checksum: 10c0/422d17c24e87170d4aa566b97a53339ae451c2f4d78512594a7ca951cdb939bc4a85c10071e6dcf77ca63de48713a77f2e71eb9214e44880233dff2090e92731
   languageName: node
   linkType: hard
 
@@ -5876,29 +5876,29 @@ __metadata:
   resolution: "outbox-ws@workspace:."
   dependencies:
     "@types/node": "npm:^22.20.5"
-    "@volontariapp/bridge": "npm:1.0.14"
-    "@volontariapp/config": "npm:3.6.0"
-    "@volontariapp/database": "npm:3.15.0"
+    "@volontariapp/bridge": "npm:1.0.15"
+    "@volontariapp/config": "npm:3.6.1"
+    "@volontariapp/database": "npm:3.15.1"
     "@volontariapp/eslint-config": "npm:^2.2.5"
-    "@volontariapp/health-check": "npm:1.0.14"
-    "@volontariapp/logger": "npm:^0.5.0"
-    "@volontariapp/monitoring": "npm:^2.5.1"
-    "@volontariapp/outbox": "npm:0.11.1"
+    "@volontariapp/health-check": "npm:1.0.15"
+    "@volontariapp/logger": "npm:^0.6.0"
+    "@volontariapp/monitoring": "npm:^2.5.2"
+    "@volontariapp/outbox": "npm:0.11.2"
     "@volontariapp/testing": "npm:^1.0.3"
     class-transformer: "npm:^0.5.1"
     class-validator: "npm:^0.15.1"
     eslint: "npm:^9.18.0"
     eslint-config-prettier: "npm:^10.0.1"
     eslint-plugin-prettier: "npm:^5.5.7"
-    globals: "npm:^17.13.0"
+    globals: "npm:^17.14.0"
     pg: "npm:^8.23.1"
-    prettier: "npm:^3.9.10"
+    prettier: "npm:^3.10.1"
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.1"
     tsx: "npm:^4.23.15"
     typeorm: "npm:^0.3.31"
     typescript: "npm:5.7.3"
-    typescript-eslint: "npm:^8.72.0"
+    typescript-eslint: "npm:^8.72.2"
   languageName: unknown
   linkType: soft
 
@@ -6172,12 +6172,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.9.10":
-  version: 3.9.10
-  resolution: "prettier@npm:3.9.10"
+"prettier@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "prettier@npm:3.10.1"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/0b3531593aa6fb36ac6baf629cb058bda472c59a6938774f931fe55283a07c62e6f56e621b043a82d8a3e21fc284c08c34f9e539fc70072635f79b7bae1a1067
+  checksum: 10c0/e8c03ea575a30e15afa75a3700e94609050502980d7c906374aea4cf623eef4dce0816100126207e675cc1ed54b7dfce60f02dbee8d61ec27dc69ce5df6c3723
   languageName: node
   linkType: hard
 
@@ -7052,18 +7052,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^8.72.0":
-  version: 8.72.0
-  resolution: "typescript-eslint@npm:8.72.0"
+"typescript-eslint@npm:^8.72.2":
+  version: 8.72.2
+  resolution: "typescript-eslint@npm:8.72.2"
   dependencies:
-    "@typescript-eslint/eslint-plugin": "npm:8.72.0"
-    "@typescript-eslint/parser": "npm:8.72.0"
-    "@typescript-eslint/typescript-estree": "npm:8.72.0"
-    "@typescript-eslint/utils": "npm:8.72.0"
+    "@typescript-eslint/eslint-plugin": "npm:8.72.2"
+    "@typescript-eslint/parser": "npm:8.72.2"
+    "@typescript-eslint/typescript-estree": "npm:8.72.2"
+    "@typescript-eslint/utils": "npm:8.72.2"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 10c0/6fd657c7d76a241bac823e16faca87980da2ea101ab11156dd1d728410ba5d06f9ccab635527052fb4c3248111553f7cafd12c76a9bf7654afa3e347fd4b90e6
+  checksum: 10c0/9179509d74c3a0026f6b607e6f1b358b4b915e1ff1ae7a381cf415aa5a58ebfe05c871c5831550a872ca0c55d9cbc266f4b3ddee9bfedcb379d591e351b365a1
   languageName: node
   linkType: hard
 
